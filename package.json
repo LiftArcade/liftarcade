@@ -1,0 +1,23 @@
+{
+    "name": "@liftarcade/root",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "infra/*",
+        "packages/*"
+    ],
+    "dependencies": {
+        "@manypkg/cli": "^0.21.0",
+        "@preconstruct/cli": "^2.7.0"
+    },
+    "scripts": {
+        "postinstall": "preconstruct dev && manypkg check",
+        "build": "preconstruct build"
+    },
+    "preconstruct": {
+        "packages": [
+            "packages/*"
+        ]
+    }
+}
