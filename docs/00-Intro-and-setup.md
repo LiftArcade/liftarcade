@@ -1,29 +1,34 @@
-# Introduction and setup
+# Introduction and Setup
 
-Throughout this process, I plan to document both the code and the _process_ including business decisions, technical decisions, and the reasoning behind them. The documents can be found in the `docs` folder. My ultimate goal is that this project can be used as a reference for future projects, as well as garner some healthy criticism from the community so that I and other may learn from this.
+This project has two goals:
 
-### Quick who am I
+1. Build an open-source project that can be used as a learning resource, gather feedback, and accept contributions from the community.
+2. Establish a profitable, partially open-source company that provides reliable and well-documented fitness advice.
 
-I am a hobbyist and have no formal education in Computer Science. I have been dabbling in computers since a very young age however, and starting with slackware I have dabbled in OS development, web development, and backend development. This said, I have never fully completed a project of this scale, and I am looking forward to the challenge and learning what I can. I do this mostly for fun, but if it turns out to make millions (it will not), I will deny this (i probably wont do this) and say the goal was always to make millions (again, it will not).
+Throughout the process, I will document the code, business decisions, and technical choices in the `docs` folder. My aim is for this project to serve as a reference for future endeavors and to benefit from constructive criticism from the community.
+
+## Quick Introduction
+
+I am a self-taught hobbyist with a passion for computers. While I lack formal education in Computer Science, I have experience in various areas such as OS development, web development, and backend development. This project presents a new challenge for me, and I am excited to learn and grow from it. While it's primarily for fun, any financial success is not expected or a primary goal.
 
 ## Project structure
 
-Setup a mono-repo using the guide found at [https://monorepo.guide/](https://monorepo.guide/). The only difference is that I decided to use pnpm workspaces.
+To set up the project, I followed the guide at [https://monorepo.guide/](https://monorepo.guide/) with the exception of using pnpm workspaces.
 
-The mono-repo is setup with the following structure:
+The mono-repo is structured as follows:
 
 ```
-/app -> for the frontend
-/docs -> for the documentation of the project
-/packages -> for different packages used by the project as it may grow.
+/app -> Frontend
+/docs -> Project documentation
+/packages -> Various packages used by the project
 /services
-  /database -> for the backend service
+  /database -> Backend service for the database
 ```
 
-## Tech stack added
+## Tech Stack
 
-- [markdown](https://www.markdownguide.org/) - for the documentation
-- [github](https://www.github.com/) - for the code hosting
+- [Markdown](https://www.markdownguide.org/) - for the documentation
+- [GitHub](https://www.github.com/) - for the code hosting
 - [pnpm](https://pnpm.js.org/) - for package management
 - [pnpm workspaces](https://pnpm.js.org/en/workspaces) - for mono-repo management
 - [mono-repo.guide](https://monorepo.guide/) - for mono-repo setup
