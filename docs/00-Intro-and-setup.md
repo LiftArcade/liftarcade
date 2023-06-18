@@ -33,3 +33,8 @@ The mono-repo is structured as follows:
 - [pnpm workspaces](https://pnpm.js.org/en/workspaces) - for mono-repo management
 - [mono-repo.guide](https://monorepo.guide/) - for mono-repo setup
 - [Github Flow](https://guides.github.com/introduction/flow/) - for the git workflow
+
+## Internal Management
+
+- [Notion](https://www.notion.so/) (with AI subscription) - This is really used all over the place and I feel it’s too good to pass up. From marketing to internal planing of tweets, roadmaps and etc. What is put on Github, likely started as a draft in Notion.
+  
