@@ -1,2 +1,6 @@
-<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-asphalt">Welcome to LiftArcade</h1>
+<script>
+    import { typographyVariants } from "$lib/components/ui/Typography.svelte";
+</script>
+
+<h1 class={typographyVariants({variant: "h1", color: "default"})}>Welcome to LiftArcade</h1>
 <p>Under construction.</p>
