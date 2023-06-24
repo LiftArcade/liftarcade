@@ -1,0 +1,25 @@
+{
+  "name": "@liftarcade/services-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "db:pull": "drizzle-kit introspect:pg",
+    "db:migrate": "drizzle-kit generate:pg",
+    "db:push": "tsx src/migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.27.0",
+    "nanoid": "^4.0.2",
+    "pg": "^8.11.0",
+    "tsx": "^3.12.7"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.2",
+    "drizzle-kit": "^0.19.2"
+  }
+}
