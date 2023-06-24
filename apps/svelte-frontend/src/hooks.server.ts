@@ -4,7 +4,7 @@ import type { Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 
 export const dbServerHandle = (async ({ event, resolve }) => {
-	const drizzleDB = await dbForServerHandle;
+	const drizzleDB = dbForServerHandle;
 	event.locals = { drizzleDB };
 	const response = await resolve(event);
 	return response;

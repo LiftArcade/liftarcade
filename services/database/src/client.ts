@@ -3,15 +3,15 @@ import postgres from "pg";
 import "dotenv/config";
 
 export const pooledDrizzleClient = (dbString: string) => {
-  const client = new postgres.Pool({
-    connectionString: process.env.DATABASE_URL,
+  const pool = new postgres.Pool({
+    connectionString: dbString,
   });
-  return client.connect().then(() => drizzle(client));
+  return drizzle(pool);
 };
 
 export const singleDrizzleClient = (dbString: string) => {
   const client = new postgres.Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: dbString,
   });
   return client.connect().then(() => drizzle(client));
 };
