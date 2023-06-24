@@ -3,7 +3,12 @@
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+
+		interface Locals {
+			// Sets up  the drizzle db connection
+			drizzleDB: Awaited<ReturnType<typeof import('@liftarcade/services-database').drizzleClient>>;
+		}
+
 		// interface PageData {}
 		// interface Platform {}
 	}

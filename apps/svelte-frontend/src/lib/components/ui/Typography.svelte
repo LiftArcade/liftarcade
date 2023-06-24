@@ -6,6 +6,7 @@
   {
     variants: {
       variant: {
+        default: "text-base",
         h1: "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
         h2: "scroll-m-20 text-3xl font-semibold tracking-tight",
         h3: "scroll-m-20 text-2xl font-semibold tracking-tight",
@@ -18,13 +19,14 @@
         lead: "text-xl text-muted-foreground",
         large: "text-lg font-semibold",
         small: "text-sm font-medium leading-none",
-        muted: "text-sm text-muted-foreground"
+        muted: "text-sm"
       },
       color: {
         default: "text-primary",
         secondary: "text-secondary",
         destructive: "text-destructive",
         accent: "text-accent",
+        muted: "text-muted-foreground",
         "primary-foreground": "text-primary-foreground",
         "secondary-foreground": "text-secondary-foreground",
         "destructive-foreground": "text-destructive-foreground",
