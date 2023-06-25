@@ -3,15 +3,13 @@
 	import { cubicIn, cubicInOut, cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
-	import {
-		XMark,
-		Bars3,
-		ChartBarSquare,
-		UserCircle,
-		QueueList,
-		RectangleGroup,
-		ListBullet
-	} from 'svelte-heros';
+	import XMark from 'svelte-heros-v2/XMark.svelte';
+	import Bars3 from 'svelte-heros-v2/Bars3.svelte';
+	import ChartBarSquare from 'svelte-heros-v2/ChartBarSquare.svelte';
+	import UserCircle from 'svelte-heros-v2/UserCircle.svelte';
+	import QueueList from 'svelte-heros-v2/QueueList.svelte';
+	import RectangleGroup from 'svelte-heros-v2/RectangleGroup.svelte';
+	import ListBullet from 'svelte-heros-v2/ListBullet.svelte';
 	import Logo from '$lib/assets/landing-logo-icon.svg';
 	import ProLabel from '$lib/components/ui/ProLabel.svelte';
 	import AlphaLabel from '$lib/components/ui/AlphaLabel.svelte';

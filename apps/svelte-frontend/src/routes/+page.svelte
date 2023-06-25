@@ -3,11 +3,11 @@
 	import LandingLogo from '$lib/assets/landing-logo.svg';
 	import { buttonVariants } from '$lib/components/ui/Button.svelte';
 	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
-	import { cn } from '$lib/utils/cn';
-	import { ArrowRight } from 'svelte-heros';
+	import ArrowRight from 'svelte-heros-v2/ArrowRight.svelte';
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaTwitter from 'svelte-icons/fa/FaTwitter.svelte';
+	import { cn } from '$lib/utils/cn';
 </script>
 
 <svelte:head>
