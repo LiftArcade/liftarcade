@@ -5,22 +5,15 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1687537468911,
-      "tag": "0000_legal_human_robot",
+      "when": 1688175436171,
+      "tag": "0000_fearless_talisman",
       "breakpoints": true
     },
     {
       "idx": 1,
       "version": "5",
-      "when": 1687537560249,
-      "tag": "0001_skinny_the_hood",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1687547425285,
-      "tag": "0002_eager_praxagora",
+      "when": 1688268766131,
+      "tag": "0001_optimal_ted_forrester",
       "breakpoints": true
     }
   ]

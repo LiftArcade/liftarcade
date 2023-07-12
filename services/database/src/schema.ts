@@ -1,78 +1,97 @@
 import {
   pgTable,
-  bigint,
   varchar,
-  boolean,
-  serial,
   timestamp,
   uniqueIndex,
+  text,
+  integer,
+  primaryKey,
+  json,
+  real,
 } from "drizzle-orm/pg-core";
+import type { AdapterAccount } from "@auth/core/adapters";
 
-/**
- * Authentication section: auth_user, auth_session, auth_key
- *
- * This was from the setup of Lucia - auth.
- * https://lucia-auth.com/adapters/drizzle?sveltekit
- */
-const user = pgTable("auth_user", {
-  id: varchar("id", {
-    length: 15, // change this when using custom user ids
-  }).primaryKey(),
-  // other user attributes
+export const workout = pgTable("workout", {
+  id: text("id").notNull().primaryKey(),
+  public_id: varchar("public_id", { length: 14 }),
+  owner_id: text("owner_id").notNull(),
+  created_at: timestamp("created_at").notNull().defaultNow(),
+  updated_at: timestamp("updated_at").notNull().defaultNow(),
+  performed_at: timestamp("performed_at").notNull(),
+  activitiesJSON: json("activitiesJSON"),
 });
 
-const session = pgTable("auth_session", {
-  id: varchar("id", {
-    length: 128,
-  }).primaryKey(),
-  userId: varchar("user_id", {
-    length: 15,
-  })
-    .notNull()
-    .references(() => user.id),
-  activeExpires: bigint("active_expires", {
-    mode: "number",
-  }).notNull(),
-  idleExpires: bigint("idle_expires", {
-    mode: "number",
-  }).notNull(),
+export const activity = pgTable("activity", {
+  id: text("id").notNull().primaryKey(),
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+  performedAt: timestamp("performedAt").notNull().defaultNow(),
+  type: text("type").notNull().default("SRI"),
+  owner_id: text("owner_id").notNull(),
+  workout_id: text("workout_id").notNull(),
+  position: integer("position").notNull(),
+  exerciseID: text("exerciseID").notNull(),
+  sets: integer("sets").notNull(),
+  reps: integer("reps").notNull(),
+  weight: real("weight").notNull(),
+  weightUnit: text("weightUnit").notNull(),
+  intensity: integer("intensity").notNull(),
+  notes: text("notes"),
 });
 
-const key = pgTable("auth_key", {
-  id: varchar("id", {
-    length: 255,
-  }).primaryKey(),
-  userId: varchar("user_id", {
-    length: 15,
-  })
-    .notNull()
-    .references(() => user.id),
-  primaryKey: boolean("primary_key").notNull(),
-  hashedPassword: varchar("hashed_password", {
-    length: 255,
-  }),
-  expires: bigint("expires", {
-    mode: "number",
-  }),
+export const strengthProfile = pgTable("strength_profile", {
+  id: text("id").notNull().primaryKey(),
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+  updatedAt: timestamp("updatedAt").notNull().defaultNow(),
+  owner_id: text("owner_id").notNull(),
+  baseStrength: real("base_strength").notNull(),
 });
 
-/**
- * ADD SIMPLE WOKROUT SECTION FOR TESTING
- */
+export const users = pgTable("users", {
+  id: text("id").notNull().primaryKey(),
+  name: text("name"),
+  email: text("email").notNull(),
+  emailVerified: timestamp("emailVerified", { mode: "date" }),
+  image: text("image"),
+});
 
-const workout = pgTable(
-  "workout",
+export const accounts = pgTable(
+  "accounts",
   {
-    id: serial("id").primaryKey(),
-    public_id: varchar("public_id", { length: 14 }),
-    created_at: timestamp("created_at").notNull().defaultNow(),
-    updated_at: timestamp("updated_at").notNull().defaultNow(),
+    userId: text("userId")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    type: text("type").$type<AdapterAccount["type"]>().notNull(),
+    provider: text("provider").notNull(),
+    providerAccountId: text("providerAccountId").notNull(),
+    refresh_token: text("refresh_token"),
+    access_token: text("access_token"),
+    expires_at: integer("expires_at"),
+    token_type: text("token_type"),
+    scope: text("scope"),
+    id_token: text("id_token"),
+    session_state: text("session_state"),
   },
-  (table) => {
-    return {
-      publicIdIdx: uniqueIndex("publicIdIdx").on(table.public_id),
-    };
-  }
+  (account) => ({
+    compoundKey: primaryKey(account.provider, account.providerAccountId),
+  })
 );
 
-export { user, session, key, workout };
+export const sessions = pgTable("sessions", {
+  sessionToken: text("sessionToken").notNull().primaryKey(),
+  userId: text("userId")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  expires: timestamp("expires", { mode: "date" }).notNull(),
+});
+
+export const verificationTokens = pgTable(
+  "verificationToken",
+  {
+    identifier: text("identifier").notNull(),
+    token: text("token").notNull(),
+    expires: timestamp("expires", { mode: "date" }).notNull(),
+  },
+  (vt) => ({
+    compoundKey: primaryKey(vt.identifier, vt.token),
+  })
+);

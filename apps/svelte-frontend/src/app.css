@@ -17,7 +17,7 @@
 		--gray-900: 221 39% 11%;
 		--gray-950: 224 71% 4%;
 
-		--background: var(--gray-50);
+		--background: var(--white);
 		--foreground: var(--gray-900);
 
 		--muted: var(--gray-100);
@@ -29,8 +29,8 @@
 		--card: var(--white);
 		--card-foreground: var(--gray-900);
 
-		--border: var(-gray-200);
-		--input: var(-gray-200);
+		--border: var(--gray-200);
+		--input: var(--gray-200);
 
 		--primary: var(--gray-900);
 		--primary-foreground: 210 40% 98%;
@@ -47,6 +47,13 @@
 		--ring: 215 20.2% 65.1%;
 
 		--radius: 0.5rem;
+
+		/* Custom styles for extending shadcn */
+		--text-main: var(--gray-800);
+		--text-muted: var(--gray-500);
+
+		--surface: var(--white);
+		--surface-muted: var(--gray-50);
 	}
 
 	.dark {
@@ -80,6 +87,13 @@
 		--ring: 216 34% 17%;
 
 		--radius: 0.5rem;
+
+		/* Custom styles for extending shadcn */
+		--text-main: var(--gray-100);
+		--text-muted: var(--gray-400);
+
+		--surface: var(--gray-950);
+		--surface-muted: var(--gray-900);
 	}
 }
 

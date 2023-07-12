@@ -51,6 +51,14 @@ export default {
 				charge: '#F97316',
 				energy: '#2563EB',
 				snow: '#F4F4F5',
+				surface: {
+					DEFAULT: 'hsl(var(--surface))',
+					foreground: 'hsl(var(--surface-foreground))'
+				},
+				text: {
+					DEFAULT: 'hsl(var(--text-main))',
+					muted: 'hsl(var(--text-muted))'
+				},
 				...defaultTheme.colors
 			},
 			fontFamily: {

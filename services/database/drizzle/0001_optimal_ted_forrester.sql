@@ -1,0 +1,1 @@
+ALTER TABLE "activity" ALTER COLUMN "workout_id" SET DATA TYPE text;

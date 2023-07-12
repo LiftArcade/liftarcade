@@ -1,5 +1,5 @@
 <script>
-	import Logo from '$lib/assets/landing-logo-icon.svg';
+	import Logo from '$lib/assets/logo.svg';
 </script>
 
 <div class="flex flex-col items-center py-12 px-4">
