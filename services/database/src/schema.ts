@@ -21,29 +21,13 @@ export const workout = pgTable("workout", {
   activitiesJSON: json("activitiesJSON"),
 });
 
-export const activity = pgTable("activity", {
-  id: text("id").notNull().primaryKey(),
-  createdAt: timestamp("createdAt").notNull().defaultNow(),
-  performedAt: timestamp("performedAt").notNull().defaultNow(),
-  type: text("type").notNull().default("SRI"),
-  owner_id: text("owner_id").notNull(),
-  workout_id: text("workout_id").notNull(),
-  position: integer("position").notNull(),
-  exerciseID: text("exerciseID").notNull(),
-  sets: integer("sets").notNull(),
-  reps: integer("reps").notNull(),
-  weight: real("weight").notNull(),
-  weightUnit: text("weightUnit").notNull(),
-  intensity: integer("intensity").notNull(),
-  notes: text("notes"),
-});
-
-export const strengthProfile = pgTable("strength_profile", {
+export const userProfile = pgTable("user_profile", {
   id: text("id").notNull().primaryKey(),
   createdAt: timestamp("createdAt").notNull().defaultNow(),
   updatedAt: timestamp("updatedAt").notNull().defaultNow(),
   owner_id: text("owner_id").notNull(),
-  baseStrength: real("base_strength").notNull(),
+  numberOfWorkouts: integer("numberOfWorkouts").notNull().default(0),
+  strengthProfile: json("strengthProfile"),
 });
 
 export const users = pgTable("users", {

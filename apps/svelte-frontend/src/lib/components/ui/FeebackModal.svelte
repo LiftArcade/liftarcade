@@ -1,9 +1,11 @@
 <script lang="ts">
+	import { cn } from '$lib/utils/cn';
 	import { createDialog } from '@melt-ui/svelte';
 	/** Internal helpers */
 	// import { flyAndScale } from '$docs/utils';
 	import { XMark } from 'svelte-heros';
 	import { ChatBubbleLeftRight } from 'svelte-heros';
+	import { buttonVariants } from './Button.svelte';
 
 	const feedbackModalBuilder = createDialog();
 	export const { trigger, portal, overlay, content, title, description, close, open } =
@@ -29,48 +31,22 @@
 			{...$content}
 			use:content
 		>
-			<h2 {...$title} class="m-0 text-lg font-medium text-black">Feedback</h2>
-			<p {...$description} class="mb-5 mt-[10px] leading-normal text-zinc-600">
+			<h2 {...$title} class="m-0 text-lg font-medium text-text">Feedback</h2>
+			<p {...$description} class="mb-5 mt-[10px] leading-normal text-text-muted">
 				Any advice you have is welcome. I am always looking for ways to improve.
 			</p>
 
-			<fieldset class="mb-4 flex items-center gap-5">
-				<label class="w-[90px] text-right text-magnum-800" for="name"> Name </label>
-				<input
-					class="inline-flex h-8 w-full flex-1 items-center justify-center
-                      rounded-sm border border-solid px-3 leading-none text-magnum-800"
+			<fieldset class="mb-4 items-center">
+				<label class="text-text-muted" for="comments"> Comments </label>
+				<textarea
+					class="w-full flex-1 items-center justify-center font-mono mt-2
+                      rounded border border-solid border-border focus:outline-none focus:ring-2 focus:ring-charge focus:ring-offset-2 focus:ring-offset-surface p-3 leading-none bg-surface"
 					id="name"
-					value="Thomas G. Lopes"
-				/>
-			</fieldset>
-			<fieldset class="mb-4 flex items-center gap-5">
-				<label class="w-[90px] text-right text-magnum-800" for="username"> Username </label>
-				<input
-					class="inline-flex h-8 w-full flex-1 items-center justify-center
-                      rounded-sm border border-solid px-3 leading-none text-magnum-800"
-					id="username"
-					value="@thomasglopes"
 				/>
 			</fieldset>
 			<div class="mt-[25px] flex gap-4">
-				<label for="analytics" class="ml-[10px] text-magnum-800"
-					><input type="checkbox" name="analytics" />Include debug information?
-				</label>
-				<button
-					{...$close}
-					use:close
-					class="inline-flex h-[35px] items-center justify-center rounded-[4px]
-                      bg-zinc-100 px-4 font-medium leading-none text-zinc-600"
-				>
-					Cancel
-				</button>
-				<button
-					{...$close}
-					use:close
-					class="inline-flex h-[35px] items-center justify-center rounded-[4px]
-                      bg-magnum-100 px-4 font-medium leading-none text-magnum-900"
-				>
-					Save changes
+				<button {...$close} use:close class={cn(buttonVariants({ variant: 'ghost' }), 'flex-1')}>
+					Send Feedback
 				</button>
 			</div>
 

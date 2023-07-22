@@ -1,6 +1,7 @@
-import { workout } from '@liftarcade/services-database';
+import { userProfile, workout } from '@liftarcade/services-database';
 import { redirect } from '@sveltejs/kit';
 import { and, gte, eq, desc } from 'drizzle-orm';
+import { typeid } from 'typeid-js';
 
 export const load = async ({ locals }) => {
 	const session = await locals.getSession();
@@ -31,8 +32,31 @@ export const load = async ({ locals }) => {
 		return totalVolume;
 	};
 
+	// Select user profile, or create it if it doesn't exist.
+	let createdOrSelectedUserProfile;
+	try {
+		const returnedData = await locals.drizzleDB
+			.select()
+			.from(userProfile)
+			.where(eq(userProfile.owner_id, user.id));
+		createdOrSelectedUserProfile =
+			returnedData.length === 0
+				? await locals.drizzleDB
+						.insert(userProfile)
+						.values({
+							id: typeid('profile').toString(),
+							owner_id: user.id,
+							numberOfWorkouts: 0
+						})
+						.returning()
+				: returnedData[0];
+	} catch (error) {
+		console.error('Error creating or selecting user profile', error);
+	}
+
 	return {
 		workouts: recentWorkouts,
-		recentWorkoutVolume: calculateRecentWorkoutVolume()
+		recentWorkoutVolume: calculateRecentWorkoutVolume(),
+		userProfile: createdOrSelectedUserProfile
 	};
 };

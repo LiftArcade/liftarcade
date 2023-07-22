@@ -11,18 +11,15 @@ export const load = async (event) => {
 	const user = session?.user;
 	const database = await event.locals.drizzleDB;
 
-	try {
-		if (!user?.id) throw new Error('You must be logged in to view this page.');
-		const returnedWorkout = await database
-			.select()
-			.from(workout)
-			.where(and(eq(workout.owner_id, user.id), eq(workout.id, encodeUUID(event.params.workoutID))))
-			.limit(1);
+	if (!user || !user.id) throw new Error('User is not logged in');
 
-		return {
-			workout: returnedWorkout[0]
-		};
-	} catch {
-		throw new Error(' something went wront loading the data.');
-	}
+	const returnedWorkout = await database
+		.select()
+		.from(workout)
+		.where(and(eq(workout.owner_id, user.id), eq(workout.id, encodeUUID(event.params.workoutID))))
+		.limit(1);
+
+	return {
+		workout: returnedWorkout[0]
+	};
 };

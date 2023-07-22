@@ -8,4 +8,4 @@
 	let currentPath = $page.url.pathname;
 </script>
 
-<Workouts workouts={data.workouts} {currentWorkoutPage} {currentPath} />
+<Workouts workouts={[]} {currentWorkoutPage} {currentPath} />

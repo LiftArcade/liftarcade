@@ -1,8 +1,10 @@
 <script lang="ts">
 	import ActivityBar from '$lib/components/ActivityBar.svelte';
 	import Combobox from '$lib/components/Combobox.svelte';
+	import { containerVariants } from '$lib/components/ui/Container.svelte';
 	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
 	import { workout } from '$lib/stores/workout.store';
+	import { cn } from '$lib/utils/cn';
 	import { exercises } from '@liftarcade/exercises-lib';
 	import { PlusSmall, Trash } from 'svelte-heros';
 
@@ -48,7 +50,7 @@
 	};
 </script>
 
-<div>
+<div class={cn(containerVariants({ variant: 'full-padded' }), 'mt-12')}>
 	<div class="steel-container">
 		<div class="space-y-10 mt-10">
 			<div class="flex items-center space-x-3">

@@ -7,6 +7,6 @@
 </script>
 
 <Navigation {userImageUrl} {userName} />
-<main class="px-4 sm:px-6 lg:px-8 mt-6">
+<main>
 	<slot />
 </main>
