@@ -2,14 +2,13 @@ import {
   pgTable,
   varchar,
   timestamp,
-  uniqueIndex,
   text,
   integer,
   primaryKey,
   json,
-  real,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccount } from "@auth/core/adapters";
+import { Activity } from "./types";
 
 export const workout = pgTable("workout", {
   id: text("id").notNull().primaryKey(),
@@ -18,7 +17,7 @@ export const workout = pgTable("workout", {
   created_at: timestamp("created_at").notNull().defaultNow(),
   updated_at: timestamp("updated_at").notNull().defaultNow(),
   performed_at: timestamp("performed_at").notNull(),
-  activitiesJSON: json("activitiesJSON"),
+  activitiesJSON: json("activitiesJSON").$type<Activity[]>(),
 });
 
 export const userProfile = pgTable("user_profile", {

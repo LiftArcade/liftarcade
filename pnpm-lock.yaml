@@ -192,6 +192,9 @@ importers:
       tsx:
         specifier: ^3.12.7
         version: 3.12.7
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
     devDependencies:
       '@types/pg':
         specifier: ^8.10.2

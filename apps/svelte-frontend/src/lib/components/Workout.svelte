@@ -1,23 +1,25 @@
 <script lang="ts">
-	import type { activity } from '@liftarcade/services-database';
+	import type { workout as drizzleWorkout } from '@liftarcade/services-database';
 	import type { InferModel } from 'drizzle-orm';
+	import { extractUUID } from '$lib/utils/typeid';
 
-	export let dateString = '';
-	export let href = '';
-	export let activities: string = '';
-	export let exerciseNames: string[] = [];
-	export let accessoryInfo: string[] = [];
-	export let templateString: string = '';
+	// Switch to handling the logic of display of workout internally.
+	export let workout: InferModel<typeof drizzleWorkout> | undefined;
+
+	// Extract activity names
+	let exerciseNames = workout?.activitiesJSON?.map((activity) => activity.exercise.name) ?? [];
 
 	// Get the first three exercise names as a preview
-	$: exerciseString = exerciseNames.slice(0, 3).join(', ');
+	let dateString = workout?.performed_at?.toLocaleDateString() ?? '';
+	let exerciseString = exerciseNames.slice(0, 3).join(', ');
+	let href = `/dashboard/workouts/${extractUUID(workout?.id)}`;
 	$: {
 		if (exerciseNames.length > 3) {
 			exerciseString += ` + ${exerciseNames.length - 3} others`;
 		}
 	}
 
-	$: accessoryString = accessoryInfo.join(', ');
+	let accessoryString = 'Test';
 </script>
 
 <div class="bg-surface border-border border py-8 px-6 rounded-xl text-text-muted text-sm">
@@ -27,7 +29,7 @@
 			class="text-text hover:text-charge font-bold transition-colors text-xl text-ellipsis line-clamp-1"
 			>{dateString}</a
 		>
-		<div class="ml-auto line-clamp-1 mt-1">{templateString}</div>
+		<div class="ml-auto line-clamp-1 mt-1">Custom</div>
 	</div>
 	<div class="block md:flex items-center">
 		<div class="line-clamp-1 mt-1">

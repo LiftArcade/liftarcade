@@ -1,8 +1,10 @@
+import type { Activity } from '@liftarcade/services-database/src/types';
 import { writable } from 'svelte/store';
 
 type WorkoutClient = {
+	id?: string;
 	performed_at: Date;
-	activities: [];
+	activities: Partial<Activity>[];
 };
 
 export function createStore() {
@@ -18,7 +20,7 @@ export function createStore() {
 		});
 	}
 
-	function addActivity(activity) {
+	function addActivity(activity: Activity) {
 		update((state) => {
 			return {
 				...state,
@@ -27,7 +29,7 @@ export function createStore() {
 		});
 	}
 
-	function removeActivity(activtiy) {
+	function removeActivity(activtiy: Activity) {
 		update((state) => {
 			return {
 				...state,
@@ -36,13 +38,13 @@ export function createStore() {
 		});
 	}
 
-	function moveActivityOneUp(activity) {
+	function moveActivityOneUp(activity: Activity) {
 		update((state) => {
-			const index = state.activities.findIndex((a) => a === activity);
+			const index = state.activities.indexOf(activity);
 			if (index === 0) return state;
-			const temp = state.activities[index - 1];
+			const temporary = state.activities[index - 1];
 			state.activities[index - 1] = state.activities[index];
-			state.activities[index] = temp;
+			state.activities[index] = temporary;
 			return {
 				...state,
 				activities: state.activities
@@ -50,13 +52,13 @@ export function createStore() {
 		});
 	}
 
-	function moveActivityOneDown(activity) {
+	function moveActivityOneDown(activity: Activity) {
 		update((state) => {
-			const index = state.activities.findIndex((a) => a === activity);
+			const index = state.activities.indexOf(activity);
 			if (index === state.activities.length - 1) return state;
-			const temp = state.activities[index + 1];
+			const temporary = state.activities[index + 1];
 			state.activities[index + 1] = state.activities[index];
-			state.activities[index] = temp;
+			state.activities[index] = temporary;
 			return {
 				...state,
 				activities: state.activities

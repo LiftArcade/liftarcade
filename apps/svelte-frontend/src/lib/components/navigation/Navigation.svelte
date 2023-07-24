@@ -167,6 +167,8 @@
 					<a
 						href={navItem.href}
 						class="flex items-center text-sm text-text-muted space-x-2 font-medium hover:text-text rounded-lg px-3 py-1 active:opacity-90"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<div>{navItem.value}</div>
 					</a>
@@ -190,7 +192,7 @@
 					href="/create"
 					class="flex text-text h-9 px-3 gap-2 font-medium items-center cursor-pointer hover:text-primary transition-colors hover:bg-border duration-75 rounded-lg active:opacity-90"
 				>
-					<svelte:component this={PlusCircle} class="h-5 w-5" />
+					<svelte:component this={PlusCircle} class="h-5 w-5" tabindex="-1" />
 					<div>Add workout</div>
 				</a>
 			</li>

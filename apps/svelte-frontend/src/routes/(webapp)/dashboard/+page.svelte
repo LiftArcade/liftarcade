@@ -6,6 +6,7 @@
 	import { Hashtag } from 'svelte-heros';
 	import { extractUUID } from '$lib/utils/typeid.js';
 	import { containerVariants } from '$lib/components/ui/Container.svelte';
+	import Workout from '$lib/components/Workout.svelte';
 
 	export let data;
 </script>
@@ -111,26 +112,9 @@
 					)}>View All</a
 				>
 			</div>
-			<div class="border-border border py-2">
+			<div class="py-2">
 				{#each data.workouts as workout}
-					<div>
-						<a
-							href="/dashboard/workouts/{extractUUID(workout.id)}"
-							class="flex items-center space-x-4"
-						>
-							<div class="flex-grow">
-								<div class="text-sm font-medium text-text">
-									{workout.performed_at.toLocaleDateString(undefined, {
-										weekday: 'long',
-										year: 'numeric',
-										month: 'long',
-										day: 'numeric'
-									})}
-								</div>
-							</div>
-							<div class="text-sm font-medium text-gray-500">{workout.id}</div>
-						</a>
-					</div>
+					<Workout {workout} />
 				{/each}
 			</div>
 		</div>
