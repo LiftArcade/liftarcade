@@ -16,6 +16,7 @@
 	import { containerVariants } from '../ui/Container.svelte';
 
 	import FeedbackModal from '../ui/FeebackModal.svelte';
+	import { buttonVariants } from '../ui/Button.svelte';
 
 	function toggleShowSidebar() {
 		showSidebar = !showSidebar;
@@ -186,11 +187,8 @@
 					/^\/create/.test($page.url.pathname) && ' border-b-2 border-charge'
 				)}
 			>
-				<a
-					href="/create"
-					class="flex text-text h-9 px-3 gap-2 font-medium items-center cursor-pointer hover:text-primary transition-colors hover:bg-border duration-75 rounded-lg active:opacity-90"
-				>
-					<svelte:component this={PlusCircle} class="h-5 w-5" />
+				<a href="/create" class={cn(buttonVariants({ variant: 'navLink', size: 'sm' }))}>
+					<svelte:component this={PlusCircle} class="h-5 w-5 mr-2" />
 					<div>Add workout</div>
 				</a>
 			</li>
@@ -199,10 +197,7 @@
 
 			{#each navigation as navItem}
 				<li class={cn('relative h-11 top-1', navItem.activeMatch && ' border-b-2 border-charge')}>
-					<a
-						href={navItem.href}
-						class="flex text-text h-9 px-3 gap-2 font-medium items-center cursor-pointer hover:text-primary transition-colors hover:bg-border duration-75 rounded-lg active:opacity-90"
-					>
+					<a href={navItem.href} class={cn(buttonVariants({ variant: 'navLink', size: 'sm' }))}>
 						<div>{navItem.value}</div>
 					</a>
 				</li>
