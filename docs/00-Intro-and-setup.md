@@ -7,6 +7,12 @@ This project has two goals:
 
 Throughout the process, I will document the code, business decisions, and technical choices in the `docs` folder. My aim is for this project to serve as a reference for future endeavors and to benefit from constructive criticism from the community.
 
+## On the shoulders of giants
+
+This project is heavily inspired by Kent C Dobbs and his [Epic Web](https://www.epicweb.dev/) course. The exception is that this project is built using svelte. I highly recommend checking out his course if you are interested in learning React or web dev in general. It does a great job of going through things at a level higher than "Hello world", like many other courses do. It also explains the decisions behind the code, which is something I find lacking in many other courses.
+
+Additionally, it is build using UI inspiration from shadcn-ui and tailwindcss.
+
 ## Quick Introduction
 
 I am a self-taught hobbyist with a passion for computers. While I lack formal education in Computer Science, I have experience in various areas such as OS development, web development, and backend development. This project presents a new challenge for me, and I am excited to learn and grow from it. While it's primarily for fun, any financial success is not expected or a primary goal.
@@ -38,3 +44,15 @@ The mono-repo is structured as follows:
 
 - [Notion](https://www.notion.so/) (with AI subscription) - This is really used all over the place and I feel it’s too good to pass up. From marketing to internal planing of tweets, roadmaps and etc. What is put on Github, likely started as a draft in Notion.
   
+
+## Template for decisions
+
+```markdown
+# Title
+Date: YYYY-MM-DD
+Status: proposed | rejected | accepted | deprecated | … | superseded by 0005
+
+## Context
+## Decision
+## Consequences
+```

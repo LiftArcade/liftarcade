@@ -16,15 +16,14 @@
 		--gray-800: 215 28% 17%;
 		--gray-900: 221 39% 11%;
 		--gray-950: 224 71% 4%;
+		--charge: 25 95% 53%;
 
-		--background: var(--white);
-		--foreground: var(--gray-900);
+		/* Controls the background. If a components relies on the background, it may use this var */
+		--surface: var(--white);
+		--surface-muted: var(--gray-50);
 
 		--muted: var(--gray-100);
 		--muted-foreground: var(--gray-500);
-
-		--popover: var(--white);
-		--popover-foreground: var(--gray-500);
 
 		--card: var(--white);
 		--card-foreground: var(--gray-900);
@@ -51,20 +50,17 @@
 		/* Custom styles for extending shadcn */
 		--text-main: var(--gray-800);
 		--text-muted: var(--gray-500);
-
-		--surface: var(--white);
-		--surface-muted: var(--gray-50);
 	}
 
 	.dark {
+		--surface: var(--gray-950);
+		--surface-muted: var(--gray-900);
+
 		--background: var(--gray-950);
 		--foreground: var(--gray-300);
 
 		--muted: var(--gray-800);
 		--muted-foreground: var(--gray-500);
-
-		--popover: 224 83% 7%;
-		--popover-foreground: 215 20.2% 65.1%;
 
 		--card: 224 83% 7%;
 		--card-foreground: 213 31% 91%;
@@ -72,8 +68,9 @@
 		--border: 216 34% 17%;
 		--input: 216 34% 17%;
 
-		--primary: 210 40% 98%;
-		--primary-foreground: 222.2 47.4% 1.2%;
+		/* For buttons */
+		--primary: var(--gray-300);
+		--primary-foreground: var(--gray-950);
 
 		--secondary: var(--gray-900);
 		--secondary-foreground: 210 40% 98%;
@@ -91,9 +88,6 @@
 		/* Custom styles for extending shadcn */
 		--text-main: var(--gray-100);
 		--text-muted: var(--gray-400);
-
-		--surface: var(--gray-950);
-		--surface-muted: var(--gray-900);
 	}
 }
 

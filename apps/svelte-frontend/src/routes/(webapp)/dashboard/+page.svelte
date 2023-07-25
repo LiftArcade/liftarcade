@@ -92,13 +92,9 @@
 				{/each}
 			</div> -->
 
-				<a
-					class="h-10 flex items-center justify-center w-full bg-gray-900 text-white rounded-full"
-					href="/dashboard/profile"
-				>
-					Go to Profile
-				</a>
-			</div>
+			<a class={cn(buttonVariants({ variant: 'default' }), 'w-full')} href="/dashboard/profile">
+				Go to Profile
+			</a>
 		</div>
 
 		<div id="Recent Workouts" class="mt-16">

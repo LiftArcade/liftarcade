@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ActivityBar from '$lib/components/ActivityBar.svelte';
 	import Combobox from '$lib/components/Combobox.svelte';
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
+	import { buttonVariants } from '$lib/components/ui/Button.svelte';
 	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
 	import { workout } from '$lib/stores/workout.store';
 	import { cn } from '$lib/utils/cn';
@@ -66,17 +66,17 @@
 				/>
 
 				<button
-					class="active:transform-none inline-flex items-center justify-center text-sm space-x-0.5 font-medium transition-colors bg-asphalt dark:bg-charge text-snow hover:bg-asphalt/90 h-9 px-3 rounded-md dark:border dark:border-gray-800"
+					class={buttonVariants({ variant: 'default', size: 'sm' })}
 					on:click={handleCreateWorkout}
 				>
 					<span><PlusSmall class="h-5 w-5" /></span>
 					<span> Save workout </span></button
 				>
 				<button
-					class="group h-9 w-9 flex items-center justify-center border border-gray-200 rounded-md hover:bg-gray-100 transition-colors dark:border-gray-800 dark:hover:bg-gray-800"
+					class={cn(buttonVariants({ variant: 'outline', size: 'icon' }), 'group')}
 					on:click={() => workout.reset()}
 				>
-					<Trash class="h-5 w-5 text-gray-500 group-hover:text-rose-500 transition-colors" />
+					<Trash class="h-5 w-5 text-gray-500 group-hover:text-destructive transition-colors" />
 				</button>
 			</div>
 
