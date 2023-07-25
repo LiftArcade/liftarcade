@@ -1,5 +1,5 @@
 <script>
-	import Container from '$lib/components/ui/Container.svelte';
+	import Container, { containerVariants } from '$lib/components/ui/Container.svelte';
 	import { cn } from '$lib/utils/cn';
 
 	const workouts = [
@@ -54,7 +54,7 @@
 	];
 </script>
 
-<div class="space-y-12">
+<div class={cn(containerVariants({ variant: 'full-padded' }), 'space-y-12 mt-12')}>
 	<h1 class="text-3xl">Explore</h1>
 	<hr />
 	{#each workouts as workout}
