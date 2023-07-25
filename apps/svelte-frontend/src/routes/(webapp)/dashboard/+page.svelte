@@ -4,7 +4,6 @@
 	import { cn } from '$lib/utils/cn';
 	import { Somerset } from 'somerset';
 	import { Hashtag } from 'svelte-heros';
-	import { extractUUID } from '$lib/utils/typeid.js';
 	import { containerVariants } from '$lib/components/ui/Container.svelte';
 	import Workout from '$lib/components/Workout.svelte';
 
@@ -92,9 +91,10 @@
 				{/each}
 			</div> -->
 
-			<a class={cn(buttonVariants({ variant: 'default' }), 'w-full')} href="/dashboard/profile">
-				Go to Profile
-			</a>
+				<a class={cn(buttonVariants({ variant: 'default' }), 'w-full')} href="/dashboard/profile">
+					Go to Profile
+				</a>
+			</div>
 		</div>
 
 		<div id="Recent Workouts" class="mt-16">
