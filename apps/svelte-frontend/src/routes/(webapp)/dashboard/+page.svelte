@@ -108,7 +108,7 @@
 					)}>View All</a
 				>
 			</div>
-			<div class="py-2">
+			<div class="py-2 space-y-4">
 				{#each data.workouts as workout}
 					<Workout {workout} />
 				{/each}
