@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ActivityBar from '$lib/components/ActivityBar.svelte';
 	import Combobox from '$lib/components/Combobox.svelte';
+	import { containerVariants } from '$lib/components/ui/Container.svelte';
 	import { buttonVariants } from '$lib/components/ui/Button.svelte';
 	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
 	import { workout } from '$lib/stores/workout.store';
