@@ -36,18 +36,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Setup PNPM
-        uses: pnpm/action-setup@v2
+      - name: 📥 Install deps
+        uses: bahmutov/npm-install@v1
         with:
-          version: latest
-
-      - name: Set NPM registry auth
-        shell: bash
-        run: pnpm config set always-auth && pnpm config set '//registry.npmjs.org/:_authToken' "$NPM_AUTH_TOKEN" && pnpm install
-
-      - name: 🔽 Install dependencies
-        run: pnpm install
-          
+          install-command: npm config set '//registry.npmjs.org/:_authToken' "${{env.NPM_AUTH_TOKEN}}" && npm install
 
       - name: 🔬 Lint
         run: pnpm run lint
