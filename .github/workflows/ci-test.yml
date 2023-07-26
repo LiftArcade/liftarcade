@@ -139,8 +139,5 @@ jobs:
       - name: 🔻 Install dependencies
         run: pnpm install
 
-      - name: 🏗 Build
-        run: pnpm run build
-
       - name: 🎭 Playwright tests
-        run: pnpm run test
+        run: export DATABASE_URL="notneeded" && pnpm run test
