@@ -70,10 +70,10 @@ jobs:
         with:
           version: latest
 
-      - name: Set NPM registry auth
-        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
 
-      - name: 🔽 Install dependencies
+      - name: 🔻 Install dependencies
         run: pnpm install
 
       - name: 🔬 Lint
@@ -99,10 +99,10 @@ jobs:
         with:
           version: latest
 
-      - name: Set NPM registry auth
-        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
 
-      - name: 🔽 Install dependencies
+      - name: 🔻 Install dependencies
         run: pnpm install
 
       - name: ⚡ Run vitest
@@ -129,11 +129,11 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-  
-      - name: Set NPM registry auth
-        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
 
-      - name: 🔽 Install dependencies
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
+      - name: 🔻 Install dependencies
         run: pnpm install
 
       - name: 🏗 Build
