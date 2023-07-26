@@ -41,8 +41,11 @@ jobs:
         with:
           version: latest
 
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
       - name: Set NPM registry auth
-        run: pnpm config set "//registry.npmjs.org/:_authToken=${{ env.NPM_AUTH_TOKEN }}" && pnpm install --debug          
+        run: pnpm install
 
       - name: 🔬 Lint
         run: pnpm run lint
