@@ -139,6 +139,9 @@ jobs:
       - name: 🔻 Install dependencies
         run: pnpm install
 
+      - name: Setup Playwright
+        run: pnpm dlx playwright install --with-deps chromium
+
       - name: 🎭 Playwright tests
         run: |
           export DATABASE_URL="notneeded"
