@@ -140,4 +140,10 @@ jobs:
         run: pnpm install
 
       - name: 🎭 Playwright tests
-        run: export DATABASE_URL="notneeded" && pnpm run test
+        run: |
+          export DATABASE_URL="notneeded"
+          export FACEBOOK_CLIENT_ID="null"
+          export FACEBOOK_CLIENT_SECRET="null"
+          export NEXTAUTH_SECRET="null"
+          pnpm run test
+
