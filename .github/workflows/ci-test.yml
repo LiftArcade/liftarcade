@@ -33,10 +33,10 @@ jobs:
           node-version: 18
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2
 
       - name: 🔬 Lint
-        run: npm run lint
+        run: pnpm run lint
 
   sveltecheck:
     name: ⬣ Svelte-check & TS Check
@@ -54,10 +54,10 @@ jobs:
           node-version: 18
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2
 
       - name: 🔬 Lint
-        run: npm run check
+        run: pnpm run check
 
   vitest:
     name: ⚡ Vitest
@@ -75,10 +75,10 @@ jobs:
           node-version: 18
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2
 
       - name: ⚡ Run vitest
-        run: npm run test:unit
+        run: pnpm run test:unit
 
   playwright:
     name: 🎭 Playwright
@@ -101,10 +101,10 @@ jobs:
           node-version: 18
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        uses: pnpm/action-setup@v2
 
       - name: 🏗 Build
-        run: npm run build
+        run: pnpm run build
 
       - name: 🎭 Playwright tests
-        run: npm run test
+        run: pnpm run test
