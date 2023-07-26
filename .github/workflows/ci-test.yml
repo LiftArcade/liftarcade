@@ -36,10 +36,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Install deps
-        uses: bahmutov/npm-install@v1
+      - name: 📥 Setup PNPM
+        uses: pnpm/action-setup@v2
         with:
-          install-command: npm config set '//registry.npmjs.org/:_authToken' "${{env.NPM_AUTH_TOKEN}}" && npm install
+          version: latest
+
+      - name: Set NPM registry auth
+        run: pnpm config set "//registry.npmjs.org/:_authToken=${{ env.NPM_AUTH_TOKEN }}" && pnpm install --debug          
 
       - name: 🔬 Lint
         run: pnpm run lint
