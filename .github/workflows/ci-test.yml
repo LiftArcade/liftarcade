@@ -146,5 +146,5 @@ jobs:
         run: PLAYWRIGHT_BROWSERS_PATH=0 pnpm dlx playwright install --with-deps chromium
 
       - name: 🎭 Playwright tests
-        run: PLAYWRIGHT_BROWSERS_PATH=0 pnpm playwright test
+        run: PLAYWRIGHT_BROWSERS_PATH=0 pnpm dlx playwright test
 
