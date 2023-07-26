@@ -16,6 +16,9 @@ permissions:
   actions: write
   contents: read
 
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
 jobs:
   lint:
     name: ⬣ Lint
@@ -32,11 +35,16 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Download deps
+      - name: 📥 Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
-          run_install: true
+
+      - name: Set NPM registry auth
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+
+      - name: 🔽 Install dependencies
+        run: pnpm install
           
 
       - name: 🔬 Lint
@@ -57,11 +65,16 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Download deps
+      - name: 📥 Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
-          run_install: true
+
+      - name: Set NPM registry auth
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+
+      - name: 🔽 Install dependencies
+        run: pnpm install
 
       - name: 🔬 Lint
         run: pnpm run check
@@ -81,11 +94,16 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📥 Download deps
+      - name: 📥 Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
-          run_install: true
+
+      - name: Set NPM registry auth
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+
+      - name: 🔽 Install dependencies
+        run: pnpm install
 
       - name: ⚡ Run vitest
         run: pnpm run test:unit
@@ -102,19 +120,21 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🏄 Copy test env vars
-        run: cp .env.example .env
-
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 📥 Download deps
+      - name: 📥 Setup PNPM
         uses: pnpm/action-setup@v2
         with:
           version: latest
-          run_install: true
+  
+      - name: Set NPM registry auth
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+
+      - name: 🔽 Install dependencies
+        run: pnpm install
 
       - name: 🏗 Build
         run: pnpm run build
