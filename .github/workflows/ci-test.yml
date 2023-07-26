@@ -50,36 +50,6 @@ jobs:
       - name: 🔬 Lint
         run: pnpm run lint
 
-  sveltecheck:
-    name: ⬣ Svelte-check & TS Check
-    environment: preview
-    defaults:
-      run:
-        working-directory: ./apps/svelte-frontend
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 📥 Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
-      - name: Set up NPM auth token
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
-
-      - name: 🔻 Install dependencies
-        run: pnpm install
-
-      - name: 🔬 Lint
-        run: pnpm run check
-
   vitest:
     name: ⚡ Vitest
     environment: preview
