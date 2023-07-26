@@ -52,6 +52,7 @@ jobs:
 
   sveltecheck:
     name: ⬣ Svelte-check & TS Check
+    environment: preview
     defaults:
       run:
         working-directory: ./apps/svelte-frontend
@@ -81,6 +82,7 @@ jobs:
 
   vitest:
     name: ⚡ Vitest
+    environment: preview
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -110,6 +112,7 @@ jobs:
 
   playwright:
     name: 🎭 Playwright
+    environment: preview
     runs-on: ubuntu-latest
     defaults:
       run:
