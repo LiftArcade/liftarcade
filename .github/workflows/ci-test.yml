@@ -16,9 +16,6 @@ permissions:
   actions: write
   contents: read
 
-env:
-  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
 jobs:
   lint:
     name: ⬣ Lint
@@ -40,8 +37,14 @@ jobs:
         with:
           version: latest
 
-      - name: Set NPM registry auth
-        run: pnpm config set always-auth true && pnpm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_AUTH_TOKEN }}" && pnpm install
+      - shell: bash
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "$NPM_AUTH_TOKEN"
+
+      - name: 🔽 Install dependencies
+        run: pnpm install
+          
 
       - name: 🔬 Lint
         run: pnpm run lint
