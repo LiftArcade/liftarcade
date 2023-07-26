@@ -34,6 +34,9 @@ jobs:
 
       - name: 📥 Download deps
         uses: pnpm/action-setup@v2
+        with:
+          version: latest
+          
 
       - name: 🔬 Lint
         run: pnpm run lint
@@ -55,6 +58,8 @@ jobs:
 
       - name: 📥 Download deps
         uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: 🔬 Lint
         run: pnpm run check
@@ -76,6 +81,8 @@ jobs:
 
       - name: 📥 Download deps
         uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: ⚡ Run vitest
         run: pnpm run test:unit
@@ -102,6 +109,8 @@ jobs:
 
       - name: 📥 Download deps
         uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: 🏗 Build
         run: pnpm run build
