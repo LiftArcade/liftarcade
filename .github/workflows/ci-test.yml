@@ -16,9 +16,6 @@ permissions:
   actions: write
   contents: read
 
-env:
-  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
 jobs:
   lint:
     name: ⬣ Lint
@@ -42,6 +39,8 @@ jobs:
 
       - name: Set NPM registry auth
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔽 Install dependencies
         run: pnpm install
@@ -72,6 +71,8 @@ jobs:
 
       - name: Set NPM registry auth
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔽 Install dependencies
         run: pnpm install
@@ -101,6 +102,8 @@ jobs:
 
       - name: Set NPM registry auth
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔽 Install dependencies
         run: pnpm install
@@ -132,6 +135,8 @@ jobs:
   
       - name: Set NPM registry auth
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔽 Install dependencies
         run: pnpm install
