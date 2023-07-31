@@ -1,5 +1,5 @@
 <script>
-	import Container, { containerVariants } from '$lib/components/ui/Container.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import { cn } from '$lib/utils/cn';
 
 	const workouts = [

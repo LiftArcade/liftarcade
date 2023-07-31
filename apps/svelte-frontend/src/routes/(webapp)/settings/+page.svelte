@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { signOut } from '@auth/sveltekit/client';
 	import type { PageServerData } from './$types';
 	import { CreditCard, UserCircle } from 'svelte-heros';
@@ -47,7 +47,7 @@
 	>
 		<nav class="flex-none px-4 sm:px-6 lg:px-0">
 			<ul role="list" class="flex gap-x-3 gap-y-1 whitespace-nowrap lg:flex-col">
-				{#each sideNavLinks as { id, label, icon, href }}
+				{#each sideNavLinks as { label, icon, href }}
 					<li>
 						<a
 							{href}

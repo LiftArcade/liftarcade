@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Logo from '$lib/assets/logo.svg';
 	import LogoDark from '$lib/assets/logo-dark.svg';
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
 </script>
 
 <main class="flex flex-col h-full">
-	<div class="flex flex-col text-center grow max-w-2xl mx-auto justify-center mx-6">
+	<div class="flex flex-col text-center grow max-w-2xl mx-auto justify-center">
 		<img src={Logo} class="dark:hidden h-16 w-16 mx-auto" alt="LiftArcade check logo" />
 		<img src={LogoDark} class="dark:block hidden h-16 w-16 mx-auto" alt="LiftArcade check logo" />
 		<h1 class={cn(typographyVariants({ variant: 'h1' }), 'mt-12')}>

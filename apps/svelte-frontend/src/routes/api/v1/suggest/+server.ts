@@ -52,7 +52,7 @@ export const GET: RequestHandler = async ({ url }) => {
 				'cache-control': 'private, max-age=3600, s-maxage=86400'
 			}
 		});
-	} catch (err) {
-		return new Response(err.message);
+	} catch (error_) {
+		return new Response(error_.message);
 	}
 };

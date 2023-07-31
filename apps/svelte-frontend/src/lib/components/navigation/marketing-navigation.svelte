@@ -3,24 +3,24 @@
 
 	let showSidebar = false;
 	import { cubicOut } from 'svelte/easing';
-	import { fade } from 'svelte/transition';
+	import { fade, type TransitionConfig } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
-	import { XMark, Bars3, PlusCircle, Sun } from 'svelte-heros';
+	import { XMark, Bars3, Sun } from 'svelte-heros';
 	import Logo from '$lib/assets/logo.svg';
 	import LogoDark from '$lib/assets/logo-dark.svg';
 	import { cn } from '$lib/utils/cn';
-	import { containerVariants } from '../ui/Container.svelte';
-	import { buttonVariants } from '../ui/Button.svelte';
+	import { containerVariants } from '../ui/container.svelte';
+	import { buttonVariants } from '../ui/button.svelte';
 
 	function toggleShowSidebar() {
 		showSidebar = !showSidebar;
 	}
 
-	function slowOut(node: any, { duration = 150, delay = 0 }) {
+	function slowOut(node: HTMLElement, { duration = 150, delay = 0 }): TransitionConfig {
 		return {
 			delay,
 			duration,
-			css: (t: any) => {
+			css: (t: number) => {
 				const eased = cubicOut(t);
 				return `transform: translate(-${(1 - eased) * 100}%)`;
 			}
@@ -73,7 +73,10 @@
 			transition:fade={{ duration: 150, easing: cubicOut }}
 		/>
 		<div class="fixed inset-0 flex">
-			<div class="relative mr-16 flex w-full max-w-xs flex-1" transition:slowOut={{}}>
+			<div
+				class="relative mr-16 flex w-full max-w-xs flex-1"
+				transition:slowOut={{ duration: 150 }}
+			>
 				<div
 					class="absolute left-full top-0 flex w-16 justify-center pt-5"
 					transition:fade={{ duration: 150, easing: cubicOut }}

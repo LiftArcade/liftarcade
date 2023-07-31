@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
 	import { Somerset } from 'somerset';
 	import { Hashtag } from 'svelte-heros';
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
-	import Workout from '$lib/components/Workout.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
+	import Workout from '$lib/components/workout.svelte';
 
 	export let data;
 </script>

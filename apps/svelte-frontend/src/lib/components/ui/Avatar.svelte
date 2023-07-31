@@ -21,14 +21,14 @@
 </script>
 
 <script lang="ts">
-	export let src = '';
+	export let source = '';
 	export let initial = '';
 	export let size: VariantProps<typeof avatarVariants>['size'];
 
 	import { createAvatar } from '@melt-ui/svelte';
 
 	const { image, fallback } = createAvatar({
-		src
+		src: source
 	});
 </script>
 

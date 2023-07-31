@@ -1,10 +1,10 @@
 module.exports = {
 	extends: [
+		'prettier',
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:unicorn/recommended',
 		'plugin:svelte/recommended',
-		'prettier',
 		'plugin:storybook/recommended'
 	],
 	parser: '@typescript-eslint/parser',

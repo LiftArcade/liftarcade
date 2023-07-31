@@ -1,6 +1,5 @@
 import { workout } from '@liftarcade/services-database';
 import { and, eq } from 'drizzle-orm';
-import { TypeID } from 'typeid-js';
 
 function encodeUUID(id: string) {
 	return `workout_${id}`;

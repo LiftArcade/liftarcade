@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { workout } from '$lib/stores/workout.store';
-	import type { Workout } from '@liftarcade/exercises-lib';
 	import { ChevronDown, ChevronUp, Trash } from 'svelte-heros';
-	export let activity: Workout['activities'][0];
+	import type { workout as DrizzleWorkout } from '@liftarcade/services-database';
+	import type { InferModel } from 'drizzle-orm';
+	export let activity: NonNullable<
+		InferModel<typeof DrizzleWorkout, 'select'>['activitiesJSON']
+	>[0];
 
 	type SuggestionData = Array<{
 		s: number;
@@ -10,16 +13,16 @@
 		suggestion: number;
 	}>;
 
-	let suggestion: string = '';
+	let suggestion = '';
 	let suggestionArray = [] as SuggestionData;
 
 	fetch(`/api/v1/suggest?exercise=${activity.exercise.id}&strLevel=${38}`)
-		.then((res) => res.json())
+		.then((response) => response.json())
 		.then((data) => {
 			suggestionArray = data;
 		})
-		.then((res) => res)
-		.catch((err) => console.error(err));
+		// eslint-disable-next-line unicorn/prefer-top-level-await
+		.catch((error) => console.error(error));
 
 	$: {
 		suggestion = Math.round(
@@ -52,8 +55,6 @@
 
 <style lang="postcss">
 	input {
-		@apply border bg-gray-50 dark:bg-gray-900 dark:border-gray-800 rounded-md h-9 px-3 w-24 text-right;
-
-		@apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent ring-offset-2 ring-offset-gray-50 dark:ring-offset-gray-950;
+		@apply border bg-surface border-border rounded-md h-9 px-3 w-24 text-right;
 	}
 </style>

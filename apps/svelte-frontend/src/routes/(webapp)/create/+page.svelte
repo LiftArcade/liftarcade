@@ -1,27 +1,28 @@
 <script lang="ts">
-	import ActivityBar from '$lib/components/ActivityBar.svelte';
-	import Combobox from '$lib/components/Combobox.svelte';
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import ActivityBar from '$lib/components/activity-bar.svelte';
+	import Combobox from '$lib/components/ui/combobox.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { workout } from '$lib/stores/workout.store';
 	import { cn } from '$lib/utils/cn';
 	import { exercises } from '@liftarcade/exercises-lib';
 	import { PlusSmall, Trash } from 'svelte-heros';
+	import { typeid } from 'typeid-js';
 
 	let query = '';
 
 	const handleSelected = (selected: any) => {
 		workout.addActivity({
-			id: $workout.activities.length + 1,
+			id: typeid('activity').toString(),
+			type: 'sri',
 			position: $workout.activities.length + 1,
 			exercise: selected,
-			exerciseID: selected.id,
 			sets: 1,
 			reps: 1,
-			weight: undefined,
-			weightUnit: 'lbs',
-			intensity: undefined
+			weight: 100,
+			weightUnit: 'lb',
+			intensity: 7
 		});
 		query = '';
 	};
@@ -34,20 +35,20 @@
 			},
 			body: JSON.stringify($workout)
 		})
-			.then((res) => res.json())
+			.then((response) => response.json())
 			.then((data) => {
 				workout.reset();
 			})
-			.catch((err) => console.error(err));
+			.catch((error) => console.error(error));
 	}
 
 	const handleSuggestions = async (exerciseId: string) => {
 		fetch(`/api/suggest?exercise=${exerciseId}&strLevel=${38}`)
-			.then((res) => res.json())
+			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
 			})
-			.then((res) => res);
+			.then((response) => response);
 	};
 </script>
 
@@ -93,7 +94,9 @@
 		{/if}
 
 		{#each $workout.activities as activity (activity)}
-			<ActivityBar {activity} />
+			{#if activity}
+				<ActivityBar {activity} />
+			{/if}
 		{/each}
 	</div>
 </div>

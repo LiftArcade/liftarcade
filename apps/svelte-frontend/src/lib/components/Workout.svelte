@@ -33,7 +33,7 @@
 	</div>
 	<div class="block md:flex items-center">
 		<div class="line-clamp-1 mt-1">
-			{#if !exerciseNames.length}
+			{#if exerciseNames.length === 0}
 				<div class="italic">No exercises provided</div>
 			{:else}
 				{exerciseString}

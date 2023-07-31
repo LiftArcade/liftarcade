@@ -8,25 +8,25 @@
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
-	import { XMark, Bars3, PlusCircle, ChatBubbleLeftRight } from 'svelte-heros';
+	import { XMark, Bars3, PlusCircle } from 'svelte-heros';
 	import Logo from '$lib/assets/logo.svg';
 	import LogoDark from '$lib/assets/logo-dark.svg';
-	import Avatar from '../ui/Avatar.svelte';
+	import Avatar from '../ui/avatar.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { containerVariants } from '../ui/Container.svelte';
+	import { containerVariants } from '../ui/container.svelte';
 
-	import FeedbackModal from '../ui/FeebackModal.svelte';
-	import { buttonVariants } from '../ui/Button.svelte';
+	import FeedbackModal from '../ui/feedback-modal.svelte';
+	import { buttonVariants } from '../ui/button.svelte';
 
 	function toggleShowSidebar() {
 		showSidebar = !showSidebar;
 	}
 
-	function slowOut(node: any, { duration = 150, delay = 0 }) {
+	function slowOut(node: HTMLElement, { duration = 150, delay = 0 }) {
 		return {
 			delay,
 			duration,
-			css: (t: any) => {
+			css: (t: number) => {
 				const eased = cubicOut(t);
 				return `transform: translate(-${(1 - eased) * 100}%)`;
 			}
@@ -124,7 +124,7 @@
 										href="/create"
 										class="text-foreground hover:text-primary hover:bg-muted group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-medium -mx-2"
 									>
-										<PlusCircle variation="outline" class="h-6 w-6" />
+										<PlusCircle tabindex="-1" variation="outline" class="h-6 w-6" />
 										<span class="truncate">Add workout</span>
 									</a>
 								</li>
@@ -157,7 +157,7 @@
 			<img class="h-9 w-auto hidden dark:block" src={LogoDark} alt="LiftArcade check logo" />
 			<div class="text-border ml-4">/</div>
 			<div class="ml-4 flex items-center text-sm text-text space-x-2 font-medium">
-				<Avatar src={userImageUrl} initial={userName?.[0]} size="32" />
+				<Avatar source={userImageUrl} initial={userName?.[0]} size="32" />
 				<div>{userName}</div>
 			</div>
 
@@ -190,7 +190,7 @@
 				)}
 			>
 				<a href="/create" class={cn(buttonVariants({ variant: 'navLink', size: 'sm' }))}>
-					<svelte:component this={PlusCircle} class="h-5 w-5 mr-2" />
+					<svelte:component this={PlusCircle} class="h-5 w-5 mr-2" tabindex="-1" />
 					<div>Add workout</div>
 				</a>
 			</li>

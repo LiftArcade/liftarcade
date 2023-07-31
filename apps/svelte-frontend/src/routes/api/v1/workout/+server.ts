@@ -53,8 +53,6 @@ export const DELETE: RequestHandler = async ({ request, locals }) => {
 	// Create a transation that creates a new workout, and updates the user profile to have one more workout.
 	try {
 		const returnedWorkout = await drizzleDB.transaction(async (trx) => {
-			const newWorkoutID = typeid('workout').toString();
-			// Split up all the acitivites to be saved individually
 			const userProfileForUser = await trx
 				.select()
 				.from(userProfile)

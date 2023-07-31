@@ -1,7 +1,5 @@
 <script lang="ts">
 	import './page.css';
-
-	let user: { name: string } | null = null;
 </script>
 
 <article>

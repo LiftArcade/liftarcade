@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 
 // import Avatar from '$lib/components/ui/Avatar.svelte';
-import WorkoutPage from '$lib/pages/Workouts.svelte';
+import WorkoutPage from '$lib/pages/workouts.svelte';
 import type { workout } from '@liftarcade/services-database';
 import type { InferModel } from 'drizzle-orm';
 
