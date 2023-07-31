@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-null */
 /* eslint-disable unicorn/prevent-abbreviations */
 import { drizzleClient } from '@liftarcade/services-database';
 import { DATABASE_URL } from '$env/static/private';
@@ -181,7 +182,7 @@ export function pgDrizzleAdapter(
 					)
 				);
 
-			return undefined;
+			return;
 		}
 	};
 }

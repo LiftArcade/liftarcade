@@ -1,34 +1,127 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
-
+name: ⭕ CI
 on:
   push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+    branches:
+      - main
+      - dev
+  pull_request: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: read
+
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
 jobs:
-  build-frontend:
-
+  lint:
+    name: ⬣ Lint
+    environment: preview
+    defaults:
+      run:
+        working-directory: ./apps/svelte-frontend
     runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
+      - name: Set NPM registry auth
+        run: pnpm install
+
+      - name: 🔬 Lint
+        run: pnpm run lint
+
+  vitest:
+    name: ⚡ Vitest
+    environment: preview
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/svelte-frontend
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
+      - name: 🔻 Install dependencies
+        run: pnpm install
+
+      - name: ⚡ Run vitest
+        run: pnpm run test:unit
+
+  playwright:
+    name: 🎭 Playwright
+    environment: preview
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./apps/svelte-frontend
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    timeout-minutes: 60
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm run build
-    - run: npm test
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🏄 Copy test env vars
+        run: cp .env.example .env
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
+      - name: 🔻 Install dependencies
+        run: pnpm install
+
+      - name: 📥 Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+
+      - name: 🎭 Playwright tests
+        run: pnpm exec node_modules/@playwright/test/cli.js test
+
+      - name: 📊 Upload report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

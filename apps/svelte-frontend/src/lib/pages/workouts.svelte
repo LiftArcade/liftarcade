@@ -1,10 +1,11 @@
 <script lang="ts">
-	import Workout from '$lib/components/Workout.svelte';
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import Workout from '$lib/components/workout.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
 	import type { workout } from '@liftarcade/services-database';
+
 	import type { InferModel } from 'drizzle-orm';
 
 	export let workouts: InferModel<typeof workout>[] | undefined;

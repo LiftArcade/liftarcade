@@ -5,7 +5,6 @@ import { dbForServerHandle, pgDrizzleAdapter } from '$lib/utils/db';
 import type { Handle } from '@sveltejs/kit';
 import Facebook from '@auth/core/providers/facebook';
 import type { Provider } from '@auth/core/providers';
-import type { DefaultSession } from '@auth/core/types';
 
 // Import authentication handle from apps/svelte-frontend/src/lib/authentication.ts
 
@@ -39,7 +38,7 @@ const authHandle = SvelteKitAuth({
 
 			return session;
 		},
-		async jwt({ token, user, account }) {
+		async jwt({ token, user }) {
 			if (user) {
 				token.id = user?.id;
 			}

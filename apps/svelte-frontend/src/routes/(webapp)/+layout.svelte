@@ -1,12 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Navigation from '$lib/components/navigation/Navigation.svelte';
-
-	$: {
-		if (!$page.data.session) {
-			$page.error(401, 'Unauthorized');
-		}
-	}
+	import Navigation from '$lib/components/navigation/navigation.svelte';
+	import { error } from '@sveltejs/kit';
 </script>
 
 <Navigation

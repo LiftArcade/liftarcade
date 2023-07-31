@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Workouts from '$lib/pages/Workouts.svelte';
+	import Workouts from '$lib/pages/workouts.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 

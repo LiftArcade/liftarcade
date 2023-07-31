@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { workout, userProfile } from '@liftarcade/services-database';
-import { nanoid } from '$lib/utils/nanoId';
 import { typeid } from 'typeid-js';
 import { and, eq, sql } from 'drizzle-orm';
 
@@ -26,7 +25,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				.insert(workout)
 				.values({
 					id: newWorkoutID,
-					public_id: nanoid(),
+					public_id: typeid('workoutpublic').toString(),
 					owner_id: session?.user?.id as string,
 					activitiesJSON: data.activities,
 					performed_at: formattedDate
@@ -53,8 +52,6 @@ export const DELETE: RequestHandler = async ({ request, locals }) => {
 	// Create a transation that creates a new workout, and updates the user profile to have one more workout.
 	try {
 		const returnedWorkout = await drizzleDB.transaction(async (trx) => {
-			const newWorkoutID = typeid('workout').toString();
-			// Split up all the acitivites to be saved individually
 			const userProfileForUser = await trx
 				.select()
 				.from(userProfile)

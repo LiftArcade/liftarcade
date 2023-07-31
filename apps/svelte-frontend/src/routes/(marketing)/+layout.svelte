@@ -1,5 +1,5 @@
 <script>
-	import MarketingNavigation from '$lib/components/navigation/MarketingNavigation.svelte';
+	import MarketingNavigation from '$lib/components/navigation/marketing-navigation.svelte';
 </script>
 
 <MarketingNavigation />

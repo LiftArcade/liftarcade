@@ -1,6 +1,6 @@
 <script>
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
 	import { Trash } from 'svelte-heros';
 
@@ -30,22 +30,26 @@
 	</h1>
 
 	<div class="my-12">
-		{#each data.workout.activitiesJSON as activity}
-			<div class="flex items-center space-x-3">
-				<div class="flex-grow">
-					<div class="text-text-muted">
-						{activity.exercise.name}
+		{#if !data.workout.activitiesJSON}
+			<div class="text-text-muted">No activities</div>
+		{:else}
+			{#each data.workout.activitiesJSON as activity}
+				<div class="flex items-center space-x-3">
+					<div class="flex-grow">
+						<div class="text-text-muted">
+							{activity.exercise.name}
+						</div>
+						<div class="text-text-muted">
+							{activity.sets} x {activity.reps} @ {activity.weight}
+							{activity.weightUnit}
+						</div>
 					</div>
 					<div class="text-text-muted">
-						{activity.sets} x {activity.reps} @ {activity.weight}
-						{activity.weightUnit}
+						{activity.intensity}
 					</div>
 				</div>
-				<div class="text-text-muted">
-					{activity.intensity}
-				</div>
-			</div>
-		{/each}
+			{/each}
+		{/if}
 	</div>
 
 	<button

@@ -9,8 +9,8 @@
 	</p>
 	<p>
 		If you don’t wish to accept cookies from us, you should instruct your browser to refuse cookies
-		from <a href="https://liftarcade.com">https://liftarcade.com</a>, with the understanding that we may
-		be unable to provide you with some of your desired content and services.
+		from <a href="https://liftarcade.com">https://liftarcade.com</a>, with the understanding that we
+		may be unable to provide you with some of your desired content and services.
 	</p>
 	<h3>What is a cookie?</h3>
 	<p>

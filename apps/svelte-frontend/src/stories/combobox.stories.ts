@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 
-import Combobox from '$lib/components/Combobox.svelte';
-import { exercises } from '@liftarcade/exercises-lib';
+import Combobox from '$lib/components/combobox.svelte';
+// import { exercises } from '@liftarcade/exercises-lib';
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {

@@ -2,10 +2,10 @@
 	// Error page should be a static page, so we don't need to import any data.
 	export const prerender = true;
 
-	import MarketingNavigation from '$lib/components/navigation/MarketingNavigation.svelte';
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
-	import { containerVariants } from '$lib/components/ui/Container.svelte';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import MarketingNavigation from '$lib/components/navigation/marketing-navigation.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
+	import { containerVariants } from '$lib/components/ui/container.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
 </script>
 

@@ -5,7 +5,7 @@
 	// import { flyAndScale } from '$docs/utils';
 	import { XMark } from 'svelte-heros';
 	import { ChatBubbleLeftRight } from 'svelte-heros';
-	import { buttonVariants } from './Button.svelte';
+	import { buttonVariants } from './button.svelte';
 
 	const feedbackModalBuilder = createDialog();
 	export const { trigger, portal, overlay, content, title, description, close, open } =

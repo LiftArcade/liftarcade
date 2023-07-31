@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { signIn } from '@auth/sveltekit/client';
 	import Logo from '$lib/assets/logo.svg';
-	import { typographyVariants } from '$lib/components/ui/Typography.svelte';
+	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 
 	import { Somerset } from 'somerset';
 	import { cn } from '$lib/utils/cn';
-	import { buttonVariants } from '$lib/components/ui/Button.svelte';
+	import { buttonVariants } from '$lib/components/ui/button.svelte';
 
 	import FaApple from 'svelte-icons/fa/FaApple.svelte';
 	import FaFacebookF from 'svelte-icons/fa/FaFacebookF.svelte';
@@ -16,8 +16,6 @@
 	const signInWithFacebook = async () => {
 		await signIn('facebook', { callbackUrl: '/dashboard' });
 	};
-
-	import { page } from '$app/stores';
 </script>
 
 <Somerset title="Early Access - LiftArcade" />
