@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { workout, userProfile } from '@liftarcade/services-database';
-import { nanoid } from '$lib/utils/nanoId';
 import { typeid } from 'typeid-js';
 import { and, eq, sql } from 'drizzle-orm';
 
@@ -26,7 +25,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				.insert(workout)
 				.values({
 					id: newWorkoutID,
-					public_id: nanoid(),
+					public_id: typeid('workoutpublic').toString(),
 					owner_id: session?.user?.id as string,
 					activitiesJSON: data.activities,
 					performed_at: formattedDate
