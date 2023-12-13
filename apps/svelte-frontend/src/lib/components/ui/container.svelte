@@ -4,7 +4,8 @@
 	export const containerVariants = cva('', {
 		variants: {
 			variant: {
-				'full-padded': 'px-4 sm:px-6 lg:px-8'
+				'full-padded': 'px-4 sm:px-6 lg:px-8',
+				'centered-padded': 'mx-auto max-w-7xl sm:px-6 lg:px-8 px-4'
 			}
 		}
 	});

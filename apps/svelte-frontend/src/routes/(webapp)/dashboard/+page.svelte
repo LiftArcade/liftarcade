@@ -2,17 +2,18 @@
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { Somerset } from 'somerset';
-	import { Hashtag } from 'svelte-heros';
+	import { HashIcon } from 'lucide-svelte';
 	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import Workout from '$lib/components/workout.svelte';
-
 	export let data;
+
+	let {
+		promiseData: { recentWorkouts },
+		recentWorkoutVolume
+	} = data;
 </script>
 
-<Somerset title="Dashboard - LiftArcade" description="This is a description" />
-
-<div class={cn(containerVariants({ variant: 'full-padded' }), 'mt-12')}>
+<div class={containerVariants({ variant: 'full-padded' })}>
 	<div>
 		<div class={typographyVariants({ variant: 'h2', color: 'default' })}>Dashboard</div>
 		<div class={typographyVariants({ variant: 'muted', color: 'muted' })}>
@@ -26,40 +27,44 @@
 				<div class="card-header">
 					<div>Recent Workouts</div>
 					<div class="header-icon">
-						<Hashtag class="h-3 w-3 text-muted-foreground" />
+						<HashIcon class="h-3 w-3 text-muted-foreground" />
 					</div>
 				</div>
-				<div class="card-value">{data.workouts.length}</div>
+				<div class="card-value">
+					{#await recentWorkouts then workouts}
+						{workouts.length}
+					{/await}
+				</div>
 			</div>
 
 			<div class="card col-span-2">
 				<div class="card-header">
 					<div>Recent volume</div>
 					<div class="header-icon">
-						<Hashtag class="h-3 w-3 text-gray-500" />
+						<HashIcon class="h-3 w-3 text-gray-500" />
 					</div>
 				</div>
-				<div class="card-value">{data.recentWorkoutVolume}</div>
+				<div class="card-value">{recentWorkoutVolume}</div>
 			</div>
 
 			<div class="card col-span-2">
 				<div class="card-header">
 					<div>Total workouts</div>
 					<div class="header-icon">
-						<Hashtag class="h-3 w-3 text-gray-500" />
+						<HashIcon class="h-3 w-3 text-gray-500" />
 					</div>
 				</div>
-				<div class="card-value">{data.userProfile?.numberOfWorkouts}</div>
+				<div class="card-value">a</div>
 			</div>
 
 			<div class="card col-span-2">
 				<div class="card-header">
 					<div>Recent Workouts</div>
 					<div class="header-icon">
-						<Hashtag class="h-3 w-3 text-gray-500" />
+						<HashIcon class="h-3 w-3 text-gray-500" />
 					</div>
 				</div>
-				<div class="card-value">{data.workouts.length}</div>
+				<div class="card-value">Test</div>
 				<div class="card-footer">Past 2 days</div>
 			</div>
 		</div>
@@ -109,9 +114,11 @@
 				>
 			</div>
 			<div class="py-2 space-y-4">
-				{#each data.workouts as workout}
-					<Workout {workout} />
-				{/each}
+				{#await recentWorkouts then workouts}
+					{#each workouts as workout}
+						<Workout {workout} />
+					{/each}
+				{/await}
 			</div>
 		</div>
 	</div>

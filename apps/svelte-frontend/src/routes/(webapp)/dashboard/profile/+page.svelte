@@ -3,10 +3,7 @@
 	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { Somerset } from 'somerset';
 </script>
-
-<Somerset title="Profile - LiftArcade" />
 
 <!-- TODO: Coming soon profile look-up -->
 
@@ -20,7 +17,7 @@
 	<p class={cn(typographyVariants({ variant: 'p', color: 'muted' }))}>
 		We're working hard to get this to you asap.
 	</p>
-	<a href="/dashboard" class={cn(buttonVariants({ variant: 'default', size: 'lg' }), 'mt-3')}
+	<a href="/dashboard" class={cn(buttonVariants({ variant: 'default'  }), 'mt-3')}
 		>Back to dashboard</a
 	>
 </div>

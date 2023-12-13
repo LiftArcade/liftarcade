@@ -1,18 +1,33 @@
 <script lang="ts">
 	// Data to be filtered
-	export let data: {
-		name: string;
-	}[] = [];
+	import { createCombobox, melt } from '@melt-ui/svelte';
+	import { exercises } from '@liftarcade/exercises-lib';
+	import Fuse from 'fuse.js';
 
-	// Handle selected item functions
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
-	export let handleSelected = (selected: (typeof data)[0]) => {};
-	// Search query
-	export let query = '';
+	let {
+		handleSelected = (selected) => {
+			console.log(selected);
+		}
+	}: {
+		handleSelected: () => void;
+	} = $props();
 
-	$: filteredData = query
-		? data.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
-		: data;
+	const {
+		elements: { menu, input, option, label },
+		states: { open, inputValue, touchedInput },
+		helpers: { isSelected }
+	} = createCombobox({
+		onSelectedChange: ({ next }) => {
+			console.log(next);
+			handleSelected(next.value);
+		}
+	});
+
+	const fuse = new Fuse(exercises.exercises, {
+		keys: ['name']
+	});
+
+	let filteredData = $derived($touchedInput ? fuse.search($inputValue) : fuse.search('^'));
 </script>
 
 <div class="relative mt-1">
@@ -21,25 +36,29 @@
 		autocomplete="off"
 		type="text"
 		placeholder="Search for an exercise"
-		bind:value={query}
+		use:melt={$input}
 	/>
 
-	{#if query !== ''}
-		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+	{#if $open && filteredData.length > 0}
 		<ul
 			class="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm cursor-all-scroll"
+			use:melt={$menu}
 		>
-			{#if filteredData.length === 0 && query !== ''}
+			{#if filteredData.length === 0}
 				<div class="relative cursor-default select-none py-2 px-4 text-gray-700">
 					Nothing found.
 				</div>
 			{:else if filteredData.length > 0}
 				{#each filteredData as exercise}
 					<li
-						class="relative cursor-default select-none py-2 pl-10 pr-4 text-gray-900 hover:bg-gray-100"
-						on:mousedown={() => handleSelected(exercise)}
+						class="relative cursor-default select-none py-2 pl-10 pr-4 text-gray-900 hover:bg-gray-100 data-[highlighted]:bg-gray-200 data-[highlighted]:text-gray-900
+						data-[disabled]:opacity-50"
+						use:melt={$option({
+							value: exercise.item,
+							label: exercise.item.name
+						})}
 					>
-						{exercise.name}
+						{exercise.item.name}
 					</li>
 				{/each}
 			{/if}

@@ -2,7 +2,7 @@
 	// Error page should be a static page, so we don't need to import any data.
 	export const prerender = true;
 
-	import MarketingNavigation from '$lib/components/navigation/marketing-navigation.svelte';
+	import Shell from '$lib/components/navigation/shell.svelte';
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
@@ -18,14 +18,7 @@
   ```
 -->
 
-<MarketingNavigation />
-
-<main
-	class={cn(
-		containerVariants({ variant: 'full-padded' }),
-		'flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-24 sm:py-64 lg:px-8'
-	)}
->
+<Shell>
 	<p class="text-base font-semibold leading-8 text-charge">404</p>
 	<h1 class={typographyVariants({ variant: 'h1' })}>Page not found</h1>
 	<p class="mt-6 text-base leading-7 text-text-muted">
@@ -36,4 +29,4 @@
 			><span class="mr-2" aria-hidden="true">&larr;</span>Back to home</a
 		>
 	</div>
-</main>
+</Shell>

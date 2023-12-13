@@ -2,7 +2,7 @@
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { signOut } from '@auth/sveltekit/client';
 	import type { PageServerData } from './$types';
-	import { CreditCard, UserCircle } from 'svelte-heros';
+	import { CreditCard, UserCircle } from 'lucide-svelte';
 
 	export let data: PageServerData;
 
@@ -79,7 +79,13 @@
 					<div class="pt-6 sm:flex">
 						<dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Full name</dt>
 						<dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-							<div class="text-gray-900">{data.currentUserProfile.name}</div>
+							<div class="text-gray-900">
+								{#await data.promised.currentUserProfile}
+									Loading...
+								{:then currentUserProfile}
+									{currentUserProfile.name}
+								{/await}
+							</div>
 							<button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500"
 								>Update</button
 							>
@@ -88,7 +94,13 @@
 					<div class="pt-6 sm:flex">
 						<dt class="font-medium text-gray-900 sm:w-64 sm:flex-none sm:pr-6">Email address</dt>
 						<dd class="mt-1 flex justify-between gap-x-6 sm:mt-0 sm:flex-auto">
-							<div class="text-gray-900">{data.currentUserProfile.email}</div>
+							<div class="text-gray-900">
+								{#await data.promised.currentUserProfile}
+									Loading...
+								{:then currentUserProfile}
+									{currentUserProfile.email}
+								{/await}
+							</div>
 							<button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500"
 								>Update</button
 							>

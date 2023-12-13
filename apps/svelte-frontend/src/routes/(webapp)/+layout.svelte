@@ -1,13 +1,10 @@
 <script lang="ts">
+	import Shell from '$lib/components/navigation/shell.svelte';
 	import { page } from '$app/stores';
-	import Navigation from '$lib/components/navigation/navigation.svelte';
-	import { error } from '@sveltejs/kit';
+
+	let { data } = $props();
 </script>
 
-<Navigation
-	userImageUrl={$page.data.session?.user.image}
-	userName={$page.data.session?.user.name}
-/>
-<main>
+<Shell currentPath={$page.url.pathname} currentUser={data.promised.user}>
 	<slot />
-</main>
+</Shell>

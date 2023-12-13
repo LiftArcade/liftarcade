@@ -3,8 +3,8 @@
 	import { createDialog } from '@melt-ui/svelte';
 	/** Internal helpers */
 	// import { flyAndScale } from '$docs/utils';
-	import { XMark } from 'svelte-heros';
-	import { ChatBubbleLeftRight } from 'svelte-heros';
+	import { X } from 'lucide-svelte';
+	import { MessageSquareIcon } from 'lucide-svelte';
 	import { buttonVariants } from './button.svelte';
 
 	const feedbackModalBuilder = createDialog();
@@ -17,7 +17,7 @@
 	use:trigger
 	class="flex items-center text-sm text-text-muted space-x-2 font-medium hover:text-text rounded-lg px-3 py-1 active:opacity-90"
 >
-	<ChatBubbleLeftRight tabindex="-1" variation="outline" class="h-5 w-5" />
+	<MessageSquareIcon tabindex="-1" variation="outline" class="h-5 w-5" />
 	<div>Feedback</div>
 </button>
 <div use:portal>
@@ -57,7 +57,7 @@
                   appearance-none items-center justify-center rounded-full text-magnum-800
                   hover:bg-magnum-100 focus:shadow-magnum-400"
 			>
-				<XMark />
+				<X />
 			</button>
 		</div>
 	{/if}

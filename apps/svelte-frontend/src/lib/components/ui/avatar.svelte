@@ -21,18 +21,25 @@
 </script>
 
 <script lang="ts">
-	export let source = '';
-	export let initial = '';
-	export let size: VariantProps<typeof avatarVariants>['size'];
+	let { src, initial, size = '32' } : {
+		src: string;
+		initial: string;
+		size?: VariantProps<typeof avatarVariants>['size'];
+	} = $props();
 
 	import { createAvatar } from '@melt-ui/svelte';
 
-	const { image, fallback } = createAvatar({
-		src: source
+	const { 
+		elements: {
+			image,
+			fallback
+		}
+	} = createAvatar({
+		src,
 	});
 </script>
 
 <div class={avatarVariants({ size })}>
-	<img {...$image} alt="Avatar" class="h-full w-full rounded-[inherit]" />
-	<span {...$fallback} class="text-sm font-medium">{initial}</span>
+	<img use:melt={$image} alt="Avatar" class="h-full w-full rounded-[inherit]" />
+	<span use:melt={$fallback} class="text-sm font-medium">{initial}</span>
 </div>

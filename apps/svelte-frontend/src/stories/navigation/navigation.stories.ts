@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 
-import Navigation from '$lib/components/navigation/navigation.svelte';
+import Navigation from '$lib/components/navigation/shell.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
@@ -11,13 +11,9 @@ const meta = {
 		layout: 'fullscreen'
 	},
 	argTypes: {
-		userImageUrl: {
+		currentPath: {
 			type: 'string',
-			defaultValue: 'https://placebeard.it/120x120'
-		},
-		userName: {
-			type: 'string',
-			defaultValue: 'Bryce McDaniel'
+			defaultValue: '/'
 		}
 	}
 } satisfies Meta<Navigation>;
@@ -28,7 +24,6 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/svelte/writing-stories/args
 export const Main: Story = {
 	args: {
-		userImageUrl: 'https://placebeard.it/120x120',
-		userName: 'Bryce McDaniel'
+		currentPath: '/'
 	}
 };

@@ -3,13 +3,10 @@
 	import Logo from '$lib/assets/logo.svg';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 
-	import { Somerset } from 'somerset';
 	import { cn } from '$lib/utils/cn';
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 
-	import FaApple from 'svelte-icons/fa/FaApple.svelte';
-	import FaFacebookF from 'svelte-icons/fa/FaFacebookF.svelte';
-	import FaGoogle from 'svelte-icons/fa/FaGoogle.svelte';
+	import { Facebook, Apple } from 'lucide-svelte';
 
 	const signInWithApple = () => signIn('apple', { callbackUrl: '/earlyaccess' });
 	const signInWithGoogle = () => signIn('google');
@@ -18,9 +15,7 @@
 	};
 </script>
 
-<Somerset title="Early Access - LiftArcade" />
-
-<div class="min-h-screen bg-background flex items-center justify-center">
+<div class="bg-background flex items-center justify-center h-full">
 	<div
 		class="flex bg-white dark:bg-gray-900 py-8 px-4 md:px-8 shadow-2xl rounded-xl flex-col items-center w-full mx-4 max-w-sm"
 	>
@@ -38,7 +33,7 @@
 			on:click={signInWithApple}
 		>
 			<div class="h-5 w-5 mr-2">
-				<FaApple />
+				<Apple />
 			</div>
 			Continue with Apple</button
 		>
@@ -50,7 +45,7 @@
 			on:click={signInWithGoogle}
 		>
 			<div class="h-5 w-5 mr-2">
-				<FaGoogle />
+				<Facebook />
 			</div>
 			Continue with Google</button
 		>
@@ -61,7 +56,7 @@
 			)}
 			on:click={signInWithFacebook}
 			><div class="h-5 w-5 mr-2">
-				<FaFacebookF />
+				<Facebook />
 			</div>
 			Continue with Facebook</button
 		>

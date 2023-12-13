@@ -1,0 +1,3231 @@
+{
+  "name": "Exercises",
+  "version": "1.0.0",
+  "dateCreated": "2023-03-31T13:58:32.757Z",
+  "exercises": [
+    {
+      "id": "eed587d5-dc62-4312-87e5-0f32a71a8fc3",
+      "name": "Barbell Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Barbell",
+      "otherMuscleGroups": [
+        "Arms"
+      ],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-bench-press"
+    },
+    {
+      "id": "640a026e-67af-4e94-9af8-f5bf22db5a8b",
+      "name": "Bent Over Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [
+        "Arms"
+      ],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "bent-over-row"
+    },
+    {
+      "id": "1467b0c3-21c9-4ba0-96db-d2c3d9e25159",
+      "name": "Close Grip Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "close-grip-bench-press"
+    },
+    {
+      "id": "43f9daa6-6f9c-4339-870c-8635f2af7cbd",
+      "name": "Decline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "decline-bench-press"
+    },
+    {
+      "id": "d51909a0-c0de-4f0d-bf97-354b310f7924",
+      "name": "Barbell Front Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-front-raise"
+    },
+    {
+      "id": "a1df52dc-c42e-45e5-abeb-9596cbce9ea4",
+      "name": "Good Morning",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "good-morning"
+    },
+    {
+      "id": "7c5db404-5b62-4681-bf05-3341f5f5d35b",
+      "name": "Incline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "incline-bench-press"
+    },
+    {
+      "id": "302d324e-c057-4367-8634-34186db867cf",
+      "name": "Barbell Reverse Grip Bent Over Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-reverse-grip-bent-over-row"
+    },
+    {
+      "id": "90f82f4a-dc8c-42b5-9aa2-788579a1e95d",
+      "name": "Shoulder Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-shoulder-press"
+    },
+    {
+      "id": "00b59f0a-3673-4cee-a27b-683d99d58afb",
+      "name": "Barbell Shrug",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-shrug"
+    },
+    {
+      "id": "f5cc042b-c1c0-40dc-9df1-36fa3a4f53ef",
+      "name": "Barbell Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [
+        "Glutes",
+        "Legs",
+        "Back"
+      ],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-squat"
+    },
+    {
+      "id": "05e26f4d-b59d-4272-be65-0a0a163e6f96",
+      "name": "Barbell Up Right Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-up-right-row"
+    },
+    {
+      "id": "fa92cbf6-2724-440e-b115-5f204cb1701c",
+      "name": "Cable Cross Over",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-cross-over"
+    },
+    {
+      "id": "21ab95a8-ca0c-4652-8fee-f217f04d2748",
+      "name": "Cable Flat Bench Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-flat-bench-fly"
+    },
+    {
+      "id": "4d7fba7f-451d-4014-abb7-25cb02b237f6",
+      "name": "Cable Front Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-front-raise"
+    },
+    {
+      "id": "1ada9cc2-3602-423c-bb72-fbfadb19f987",
+      "name": "Cable Incline Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-incline-fly"
+    },
+    {
+      "id": "0fb58776-c62b-4923-a7fb-b2c7d67a9f11",
+      "name": "Cable Internal Rotation",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-internal-rotation"
+    },
+    {
+      "id": "4ecc3f55-7bb9-4706-b736-acd0b31a9abc",
+      "name": "Cable Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-lateral-raise"
+    },
+    {
+      "id": "815d2971-f1fc-4bc8-af67-eb536a666b7a",
+      "name": "Cable Rear Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-rear-lateral-raise"
+    },
+    {
+      "id": "66ecda40-b89b-43ed-9908-ad85fdafd169",
+      "name": "Cable Seated Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-seated-row"
+    },
+    {
+      "id": "27304451-f58b-4563-b723-63b277f3a4b0",
+      "name": "Cable Shrug",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-shrug"
+    },
+    {
+      "id": "8de73f30-510f-4991-a371-00a34f62abce",
+      "name": "Cable Up Right Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-up-right-row"
+    },
+    {
+      "id": "97a70eef-4757-48de-8c34-da028c8874db",
+      "name": "Dip",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "dip"
+    },
+    {
+      "id": "e4422229-302e-4be3-be73-ddca89c1204d",
+      "name": "Dumbbell Arnold Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-arnold-press"
+    },
+    {
+      "id": "538f0059-c9f3-4771-8f0a-238619082e60",
+      "name": "Dumbbell Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-bench-press"
+    },
+    {
+      "id": "2ff9f984-ea63-400b-85dd-01abf12abc48",
+      "name": "Dumbbell Bent Over Delt Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-bent-over-delt-raise"
+    },
+    {
+      "id": "0a528ee8-e67c-4307-842d-9637bcdef945",
+      "name": "Dumbbell Cuban Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-cuban-press"
+    },
+    {
+      "id": "cb27a9f6-bbf7-4c17-9617-5e49464df066",
+      "name": "Dumbbell Front Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-front-raise"
+    },
+    {
+      "id": "43163420-b38b-4a0e-81f4-5d14647765c5",
+      "name": "Dumbbell Hammer Grip Incline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-hammer-grip-incline-bench-press"
+    },
+    {
+      "id": "5f1d9bb3-2b89-4c66-9c5f-ceee6e247dc1",
+      "name": "Dumbbell Incline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-incline-bench-press"
+    },
+    {
+      "id": "53a839dc-764f-4007-ac7f-00373c87541f",
+      "name": "Dumbbell Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-lateral-raise"
+    },
+    {
+      "id": "66d6c3b7-b2f3-418a-b742-cdd7e3ae3a1c",
+      "name": "Dumbbell Lying One Arm Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lying-one-arm-lateral-raise"
+    },
+    {
+      "id": "27c4f3e4-3140-418d-a83d-4112453a1fdd",
+      "name": "Dumbbell Lying Rear Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lying-rear-lateral-raise"
+    },
+    {
+      "id": "325a6d23-9b36-4989-99af-d9d24d39c56a",
+      "name": "Dumbbell One Arm Shoulder Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-shoulder-press"
+    },
+    {
+      "id": "b3e7d1d1-c825-4bf3-ba6d-f09fc301ce39",
+      "name": "Dumbbell One Arm Up Right Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-up-right-row"
+    },
+    {
+      "id": "4091c83e-0fbe-4609-8ba1-abd0f52b6463",
+      "name": "Dumbbell Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-front-raise"
+    },
+    {
+      "id": "2267ea50-add8-4b6a-936a-d6a7001a731e",
+      "name": "Dumbbell Rear Delt Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-rear-delt-row"
+    },
+    {
+      "id": "d28e4ca4-6fea-4563-8946-61751960fc18",
+      "name": "Dumbbell Decline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-decline-bench-press"
+    },
+    {
+      "id": "db1255cc-c0d9-4e8f-8842-802538aa63fc",
+      "name": "Dumbbell Decline Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-decline-fly"
+    },
+    {
+      "id": "7baccdf2-ad4a-4dfc-a89a-3a7d84b4ee53",
+      "name": "Dumbbell Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-fly"
+    },
+    {
+      "id": "db759a8c-78ca-441d-9971-2b26e0eab97a",
+      "name": "Dumbbell Shoulder Shrug",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-shoulder-shrug"
+    },
+    {
+      "id": "f9adfd47-f46c-436e-bdbc-5f63c23e0cdb",
+      "name": "Dumbbell Upright Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-upright-row"
+    },
+    {
+      "id": "65454679-3bb2-412a-8344-25ebf3f52a58",
+      "name": "Leg Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "leg-raise"
+    },
+    {
+      "id": "0d749956-822b-47f9-857c-e0af020fa093",
+      "name": "Machine Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "machine-fly"
+    },
+    {
+      "id": "6710e1e3-fe2d-445e-babf-d7bffa1ab1f6",
+      "name": "Machine Shoulder Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "machine-shoulder-press"
+    },
+    {
+      "id": "1722c2d3-01ac-4ad4-8e27-4bf05e04d522",
+      "name": "Dumbbell Shoulder Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-shoulder-press"
+    },
+    {
+      "id": "7a386fa4-06f6-4a5e-a8b2-28d78329c3a2",
+      "name": "Smith Machine Rear Delt Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-rear-delt-row"
+    },
+    {
+      "id": "993163f7-7ff0-4160-a80c-25524fb196bf",
+      "name": "Smith Machine Shrug",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-shrug"
+    },
+    {
+      "id": "236b9051-5d46-4dca-9e9a-1352b7efcf29",
+      "name": "Smith Machine Upright Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-upright-row"
+    },
+    {
+      "id": "dd73a37b-9d9c-4303-a0e8-3e1456e768ab",
+      "name": "T Bar Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "t-bar-row"
+    },
+    {
+      "id": "0e08f583-abcb-4b4c-ae49-83a81a1b90fb",
+      "name": "Dumbbell Lying Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lying-triceps-extension"
+    },
+    {
+      "id": "0a8dbf2d-4bee-4095-993f-b4555a4f842b",
+      "name": "Barbell Lying Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-lying-triceps-extension"
+    },
+    {
+      "id": "efa4e2cb-deb6-4ae2-81ca-1e68045545c8",
+      "name": "Ab Crunch Machine",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "ab-crunch-machine"
+    },
+    {
+      "id": "284e05d4-8346-45db-8190-9af4e7dd1712",
+      "name": "Barbell Press Sit Up",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Elite",
+      "slug": "barbell-press-sit-up"
+    },
+    {
+      "id": "1ec8860f-b253-4aba-a530-002cc7a0c2d8",
+      "name": "Flat Bench Leg Pull In",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Beginner",
+      "slug": "flat-bench-leg-pull-in"
+    },
+    {
+      "id": "fe9e58da-5052-4d71-a94f-69c3d9775b59",
+      "name": "Frog Sit Ups",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Intermediate",
+      "slug": "frog-sit-ups"
+    },
+    {
+      "id": "25823d04-2ca8-4d0d-bc3a-250dc88217de",
+      "name": "Cross Body Crunch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "cross-body-crunch"
+    },
+    {
+      "id": "9db86a37-9e11-42d0-bc27-96f736707489",
+      "name": "Tuck Crunch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "tuck-crunch"
+    },
+    {
+      "id": "7beb309c-04e3-4ac5-9da6-74ebc5c2aacc",
+      "name": "Cable Seated Crunch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-seated-crunch"
+    },
+    {
+      "id": "a15cd15a-15b3-4831-b196-e9a67e0a68ed",
+      "name": "Flat Bench Lying Leg Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Beginner",
+      "slug": "flat-bench-lying-leg-raise"
+    },
+    {
+      "id": "6375c087-8045-435c-9ad6-6c319bf9de8f",
+      "name": "Weight Plate Twist",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Intermediate",
+      "slug": "weight-plate-twist"
+    },
+    {
+      "id": "06951a72-85e1-4125-a4aa-3601bdcc14a2",
+      "name": "Side Bridge",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "side-bridge"
+    },
+    {
+      "id": "ba213a28-610e-4331-a4f3-e6c0be48448d",
+      "name": "Toe Touchers",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Stretching",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "toe-touchers"
+    },
+    {
+      "id": "84cd8983-aeff-4ed5-9eaa-e802f9b0caa0",
+      "name": "Crunches",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "crunches"
+    },
+    {
+      "id": "d0894376-e612-4ca8-b232-13faf90e2e0a",
+      "name": "Decline Crunch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "decline-crunch"
+    },
+    {
+      "id": "d64a388b-d39e-4b9b-9b8e-83bcdf667dab",
+      "name": "Cable Crunch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-crunch"
+    },
+    {
+      "id": "67f944e1-3882-4a69-b0af-dbb61867366f",
+      "name": "Dumbbell Side Bend",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Core",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-side-bend"
+    },
+    {
+      "id": "1713c130-0033-417a-bde4-46d619f20828",
+      "name": "V Bar Pull Up",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Elite",
+      "slug": "v-bar-pull-up"
+    },
+    {
+      "id": "45aa67b5-9c75-4598-8c15-d65fc199b8e3",
+      "name": "Chin Up",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Intermediate",
+      "slug": "chin-up"
+    },
+    {
+      "id": "aca2aeb5-7721-49cf-b724-761643c040e1",
+      "name": "Pull Ups",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Intermediate",
+      "slug": "pull-ups"
+    },
+    {
+      "id": "894ead8d-484e-44f7-8c4d-5d10fc5dd8b5",
+      "name": "Wide Grip Pulldown Behind The Neck",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "wide-grip-pulldown-behind-the-neck"
+    },
+    {
+      "id": "50c0f97f-8881-4459-9003-2e0f8f2ced58",
+      "name": "Wide Grip Rear Pull-Up",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Elite",
+      "slug": "wide-grip-rear-pull-up"
+    },
+    {
+      "id": "f5523a36-1a0c-4463-8fef-7aa475eb2461",
+      "name": "Wide Grip Lat Pulldown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "wide-grip-lat-pulldown"
+    },
+    {
+      "id": "8ee7e5d7-71b4-4b0b-a33f-67f262f6c113",
+      "name": "Close Grip Front Lat Pulldown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "close-grip-front-lat-pulldown"
+    },
+    {
+      "id": "e6dd28d5-93ab-4a9a-a22c-ae5394c44e8f",
+      "name": "Dumbbell Bent Over Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-bent-over-row"
+    },
+    {
+      "id": "70581314-048b-4289-8a33-e1a2fee4149d",
+      "name": "Barbell Incline Bench Pull",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-incline-bench-pull"
+    },
+    {
+      "id": "b9f06977-8fec-41c4-ab45-962d3dba460d",
+      "name": "Dumbbell One Arm Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-one-arm-row"
+    },
+    {
+      "id": "06a93e9b-08c4-4a86-a8b9-be12e76fb83b",
+      "name": "Smith Machine Bent Over Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-bent-over-row"
+    },
+    {
+      "id": "3931492e-c46d-4847-8af3-283d40b3ffa9",
+      "name": "Hyperextensions - Back Extensions",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Stretching",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "hyperextensions-back-extensions"
+    },
+    {
+      "id": "907cad89-7932-4463-ad12-d6236b2a85de",
+      "name": "Barbell Deadlift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-deadlift"
+    },
+    {
+      "id": "ddedf919-9bbf-45f9-b890-89d81bd02221",
+      "name": "Superman",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Stretching",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "superman"
+    },
+    {
+      "id": "b4fa4950-9c44-4dff-a05e-c3c6168a0cb1",
+      "name": "EZ Bar Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Beginner",
+      "slug": "ez-bar-curl"
+    },
+    {
+      "id": "95b66038-a8b0-4ad4-a416-9dc103339fd6",
+      "name": "Cable Overhead Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-overhead-curl"
+    },
+    {
+      "id": "49667012-8325-42e1-a721-85ecb44afa9d",
+      "name": "Barbell Curls Lying Against An Incline",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-curls-lying-against-an-incline"
+    },
+    {
+      "id": "6369e80d-480e-4972-a895-dcfc3d869311",
+      "name": "Dumbbell Cross Body Hammer Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-cross-body-hammer-curl"
+    },
+    {
+      "id": "4e2fd5dc-c263-4176-bde4-b99d1c1d42ad",
+      "name": "Barbell Close Grip Standing Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-close-grip-standing-curl"
+    },
+    {
+      "id": "d1247ac7-dfcd-4ebe-b3b7-5baa0523b762",
+      "name": "Dumbbell Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-bicep-curl"
+    },
+    {
+      "id": "1e737726-db52-420e-8608-4dbcbc81c607",
+      "name": "Dumbbell Seated Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-curl"
+    },
+    {
+      "id": "6cd003a0-1683-4d78-87cd-ac7e8b6519bb",
+      "name": "Cable Standing Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-standing-biceps-curl"
+    },
+    {
+      "id": "e47cfffb-ac0f-4420-85c8-175fe128bef0",
+      "name": "Dumbbell Standing One-Arm Curl Over Incline Bench",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-standing-one-arm-curl-over-incline-bench"
+    },
+    {
+      "id": "a262a572-8b58-4e0b-b6a3-cc03def1858b",
+      "name": "Cable Reverse Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-reverse-curl"
+    },
+    {
+      "id": "c63521c1-6083-4825-bf80-d982b6c80a21",
+      "name": "Barbell Spider Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Intermediate",
+      "slug": "barbell-spider-curl"
+    },
+    {
+      "id": "de3b57d7-9304-499e-9f53-a5f634e86c4f",
+      "name": "Dumbbell Incline Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-incline-curl"
+    },
+    {
+      "id": "7d2ad569-16f0-4689-b85f-3637e73f6d2d",
+      "name": "Dumbbell Concentration Curls",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-concentration-curls"
+    },
+    {
+      "id": "b0ec35b3-4e95-4b2b-ad5e-00a9e75bc4dc",
+      "name": "Dumbbell Hammer Curls",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-hammer-curls"
+    },
+    {
+      "id": "be328ade-1136-4072-a225-b14efe0f04fd",
+      "name": "Dumbbell One Arm Preacher Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-one-arm-preacher-curl"
+    },
+    {
+      "id": "d3c3caea-d515-4d4b-954c-d201e7ebf396",
+      "name": "Barbell Reverse Preacher Curls",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-reverse-preacher-curls"
+    },
+    {
+      "id": "cc1098a9-bd79-4012-9bee-81d3c13cf905",
+      "name": "Barbell Reverse Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-reverse-curl"
+    },
+    {
+      "id": "afff0f88-cf32-404b-ae8b-48b1ad8df91c",
+      "name": "Barbell Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-curl"
+    },
+    {
+      "id": "25bee941-ab9b-4a32-b014-4be72dd96724",
+      "name": "Barbell Preacher Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-preacher-curl"
+    },
+    {
+      "id": "8b6382ff-6fe5-4af4-be47-da2c9d1a0a2f",
+      "name": "Dumbbell Alternate Hammer Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-alternate-hammer-curl"
+    },
+    {
+      "id": "86aa65ff-a249-4c24-a47d-87585d7752e5",
+      "name": "Dumbbell Alternate Incline Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-alternate-incline-curl"
+    },
+    {
+      "id": "5be5cde6-3f45-45ef-bf2d-0370e047c475",
+      "name": "Dumbbell Alternate Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-alternate-bicep-curl"
+    },
+    {
+      "id": "41748203-fb57-4912-afaf-42342dd60155",
+      "name": "Barbell Behind The Back Wrist Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-behind-the-back-wrist-curl"
+    },
+    {
+      "id": "10bf1565-afac-4290-afff-b3137e43c65a",
+      "name": "Dumbbell Palms Up Wrist Curl Over A Bench",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-palms-up-wrist-curl-over-a-bench"
+    },
+    {
+      "id": "56d872d6-7a68-46f5-a4d7-5d5d35d01a08",
+      "name": "Barbell Seated Palms Up Wrist Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-seated-palms-up-wrist-curl"
+    },
+    {
+      "id": "f4203983-9f61-4885-a2c6-849396e78533",
+      "name": "Wrist Roller",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Beginner",
+      "slug": "wrist-roller"
+    },
+    {
+      "id": "5dc5f021-eecf-4c9d-afd4-b66882573d35",
+      "name": "Dumbbell Seated Palms-Down Wrist Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-palms-down-wrist-curl"
+    },
+    {
+      "id": "e46dbc23-98cd-43ca-b75e-bdbc62a3864a",
+      "name": "Cable Wrist Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-wrist-curl"
+    },
+    {
+      "id": "e31ea001-6cd3-4923-a28b-cede83faf308",
+      "name": "Dumbbell Palms Down Wrist Curl Over A Bench",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-palms-down-wrist-curl-over-a-bench"
+    },
+    {
+      "id": "898ac269-0524-40d4-b040-df43d5674ad0",
+      "name": "Barbell Palms Down Wrist Curl Over A Bench",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-palms-down-wrist-curl-over-a-bench"
+    },
+    {
+      "id": "c2461a6b-22e0-4066-a27b-9f43d1e9a1f5",
+      "name": "Barbell Palms Up Wrist Curl Over A Bench",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-palms-up-wrist-curl-over-a-bench"
+    },
+    {
+      "id": "184a5dc6-d7d0-496e-b2e1-32d48f7af62d",
+      "name": "Barbell Seated Palms Down Wrist Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Forearms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-seated-palms-down-wrist-curl"
+    },
+    {
+      "id": "86e43239-43e8-44a8-b961-b1879217e317",
+      "name": "Hack Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "hack-squat"
+    },
+    {
+      "id": "48417901-71fc-44b2-9792-79b2a5a1f48a",
+      "name": "Barbell Lunge",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-lunge"
+    },
+    {
+      "id": "b1b12a23-39d8-4a33-af3a-ab73e94105c9",
+      "name": "Lying Machine Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "lying-machine-squat"
+    },
+    {
+      "id": "2310aaca-6ed5-48cc-bb83-68bfc45069e5",
+      "name": "Leg Extensions",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "leg-extensions"
+    },
+    {
+      "id": "732ffc8f-23c5-4b96-ab66-5b887ab3f501",
+      "name": "Dumbbell Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-squat"
+    },
+    {
+      "id": "f5177657-f4af-4fc7-9119-664d1f725dca",
+      "name": "Leg Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "leg-press"
+    },
+    {
+      "id": "eb7f05b2-3b2e-4324-942b-8b7ff5d62e8c",
+      "name": "Barbell Step Ups",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-step-ups"
+    },
+    {
+      "id": "73729443-b620-4a98-89d4-a41d47351955",
+      "name": "Dumbbell Step Ups",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-step-ups"
+    },
+    {
+      "id": "425cb1bf-60f5-494a-a832-6a06250c1aff",
+      "name": "Smith Machine Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-squat"
+    },
+    {
+      "id": "fc53fe78-23e6-4b90-b648-fd6bbc671bdc",
+      "name": "Dumbbell Lunges",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-lunges"
+    },
+    {
+      "id": "f1729bdb-d1f9-427c-8abd-99dd342f0b4a",
+      "name": "Barbell Front Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-front-squat"
+    },
+    {
+      "id": "84e35752-b485-4483-8c21-c2b4ef63830d",
+      "name": "Barbell Overhead Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Olympic Weight Lifting",
+      "equipment": "Barbell",
+      "difficulty": "Elite",
+      "slug": "barbell-overhead-squat"
+    },
+    {
+      "id": "35ad6cd7-7045-43bb-9b63-06d19b21b770",
+      "name": "Barbell Seated Calf Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-seated-calf-raise"
+    },
+    {
+      "id": "3b041b07-e52e-4047-92bd-2e34342b2803",
+      "name": "Calf Press On Leg Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "calf-press-on-leg-press"
+    },
+    {
+      "id": "d0534393-2a58-46a2-b5fc-913b22003fe2",
+      "name": "Calf Raise On A Dumbbell",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "calf-raise-on-a-dumbbell"
+    },
+    {
+      "id": "18b16e58-8f62-4589-a9cd-8761a673b07e",
+      "name": "Dumbbell Standing Calf Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-standing-calf-raise"
+    },
+    {
+      "id": "af481692-7943-4dc8-8fa0-5e2da93847b6",
+      "name": "Barbell Standing Calf Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-standing-calf-raise"
+    },
+    {
+      "id": "049847c8-628e-407d-8c90-816eff15f353",
+      "name": "Seated Calf Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "seated-calf-raise"
+    },
+    {
+      "id": "002007d9-b152-495c-bb58-324dd0ee7207",
+      "name": "Standing Calf Raises",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Legs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "standing-calf-raises"
+    },
+    {
+      "id": "97a4b76f-2b83-4b78-984a-56ef75aea17a",
+      "name": "Dumbbell Seated Side Lateral Raise",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Shoulders",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-side-lateral-raise"
+    },
+    {
+      "id": "abc8b03b-538b-4ea1-b0dc-23fa0b2124df",
+      "name": "EZ Bar Incline Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Intermediate",
+      "slug": "ez-bar-incline-triceps-extension"
+    },
+    {
+      "id": "2f3c13a7-8b7f-48a1-ac16-aac5231f8ed2",
+      "name": "Dumbbell Seated Bent Over Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-bent-over-triceps-extension"
+    },
+    {
+      "id": "96f489df-eddb-4600-a402-40e6befdddd3",
+      "name": "Triceps Pushdown V Bar",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "triceps-pushdown-v-bar"
+    },
+    {
+      "id": "b0657310-e864-4444-a4f7-b620c8d0fabc",
+      "name": "Cable Kneeling Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-kneeling-triceps-extension"
+    },
+    {
+      "id": "64dd0ed7-17d4-46cb-b56b-07d9b380a815",
+      "name": "Barbell Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-triceps-extension"
+    },
+    {
+      "id": "55b6c93e-1462-4b59-babc-6a0fba7ae8b4",
+      "name": "EZ Bar Decline Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Intermediate",
+      "slug": "ez-bar-decline-triceps-extension"
+    },
+    {
+      "id": "be7e79b2-8827-4ad2-bf71-5680cefd163f",
+      "name": "Barbell Lying Close Grip Triceps Press To Chin",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-lying-close-grip-triceps-press-to-chin"
+    },
+    {
+      "id": "438f2532-f5ed-428d-b950-574a73f4b423",
+      "name": "Dumbbell Tricep Kickback",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-tricep-kickback"
+    },
+    {
+      "id": "3e114ef1-5520-4e1e-92bc-6755cb95e687",
+      "name": "Cable Rope Overhead Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-rope-overhead-triceps-extension"
+    },
+    {
+      "id": "eb7b0810-6402-4d4c-b2ca-f4bc2c91bb21",
+      "name": "Weighted Bench Dip",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Intermediate",
+      "slug": "weighted-bench-dip"
+    },
+    {
+      "id": "7fb453e8-bc22-428c-932e-da8382328c94",
+      "name": "Cable Reverse Grip Triceps Pushdown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-reverse-grip-triceps-pushdown"
+    },
+    {
+      "id": "75af36db-3013-4f82-a3b8-a5197130d4ae",
+      "name": "Dumbbell Seated Triceps Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-triceps-press"
+    },
+    {
+      "id": "9e764b04-a7b6-47d9-85a1-04fb3cbe06c7",
+      "name": "Cable Rope Triceps Pushdown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-rope-triceps-pushdown"
+    },
+    {
+      "id": "f833acb8-ecf0-4081-86ad-fddf4f0f75b1",
+      "name": "Lying Leg Curls",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "lying-leg-curls"
+    },
+    {
+      "id": "2025db8a-c2ee-4dd8-8578-43d57b113312",
+      "name": "Seated Leg Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "seated-leg-curl"
+    },
+    {
+      "id": "34e92bba-0a81-4d77-983b-694e46cb1476",
+      "name": "Barbell Front Raise and Pullover",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-front-raise-and-pullover"
+    },
+    {
+      "id": "c3d403bb-61f4-4a74-9a46-c857883dd5cd",
+      "name": "Bench Press Machine",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "bench-press-machine"
+    },
+    {
+      "id": "1a352bf0-db5f-4fc2-a85f-a4603b44dbc0",
+      "name": "Barbell Neck Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-neck-press"
+    },
+    {
+      "id": "2908f466-bf60-4393-ba37-4541ddae5e10",
+      "name": "Dumbbell Incline Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-incline-fly"
+    },
+    {
+      "id": "d836a995-6453-4820-9ba2-cfe4e6cc3588",
+      "name": "Dumbbell Incline Fly With A Twist",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-incline-fly-with-a-twist"
+    },
+    {
+      "id": "541b0828-cdc4-406c-b372-016b1e6a98cc",
+      "name": "Barbell One Arm Floor Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-one-arm-floor-press"
+    },
+    {
+      "id": "3474a088-d38d-4380-a778-42408897090b",
+      "name": "Barbell Wide Grip Decline Pullover",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-wide-grip-decline-pullover"
+    },
+    {
+      "id": "38bc5711-72e1-4a4f-bfbf-a972cbad56d5",
+      "name": "Dumbbell One Arm Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-bench-press"
+    },
+    {
+      "id": "d9b28114-c6c5-4692-acf2-a6e76f616870",
+      "name": "Dumbbell One Arm Bench Fly",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-bench-fly"
+    },
+    {
+      "id": "edf1e82c-6df7-426f-b3a9-a72f0477e727",
+      "name": "Smith Machine Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-bench-press"
+    },
+    {
+      "id": "fb4ce4e9-c899-48a0-99ab-70672f0e974c",
+      "name": "Smith Machine Incline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-incline-bench-press"
+    },
+    {
+      "id": "da493554-5156-411e-8725-194a466e44f3",
+      "name": "Barbell Wide Grip Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-wide-grip-bench-press"
+    },
+    {
+      "id": "b02fea15-e39b-42f9-90c2-d67555d8de7d",
+      "name": "Barbell Wide Grip Decline Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-wide-grip-decline-bench-press"
+    },
+    {
+      "id": "dbf2a826-9f8d-413d-8da0-b1f02d1b383b",
+      "name": "Machine Incline Chest Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "machine-incline-chest-press"
+    },
+    {
+      "id": "664ad6de-de46-4ef8-9859-203adc93af8f",
+      "name": "Machine Decline Chest Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Chest",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "machine-decline-chest-press"
+    },
+    {
+      "id": "fff2d1c3-0904-4531-b9ad-469a8e58bbf3",
+      "name": "Barbell Body Row",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-body-row"
+    },
+    {
+      "id": "33db73d8-4cd0-4606-b28a-bb07b0348289",
+      "name": "Gironda Sternum Chin Ups",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Intermediate",
+      "slug": "gironda-sternum-chin-ups"
+    },
+    {
+      "id": "ead952fd-6b7d-4fa7-be9a-6bd7eb72ab16",
+      "name": "Climbers Chin Up",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Pullup Bar",
+      "difficulty": "Intermediate",
+      "slug": "climbers-chin-up"
+    },
+    {
+      "id": "3be7b198-30a5-4d33-8635-14728b5f6aa7",
+      "name": "Cable Straight Arm Push Down",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-straight-arm-push-down"
+    },
+    {
+      "id": "20fa9999-9136-4647-89db-eb29f45a0a94",
+      "name": "Cable Underhand Pull Down",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-underhand-pull-down"
+    },
+    {
+      "id": "58556bbb-69e7-4cbb-956a-7d2fbb4f0a56",
+      "name": "Cable V Bar Pull Down",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-v-bar-pull-down"
+    },
+    {
+      "id": "98e8d682-4a8b-4396-a1d2-103f6f881060",
+      "name": "Smith Machine Deadlift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-deadlift"
+    },
+    {
+      "id": "549e43e0-5db5-414c-88b0-aeb22c2daeba",
+      "name": "Smith Machine Good Morning",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-good-morning"
+    },
+    {
+      "id": "aef2ed25-3146-449d-b05d-034a29faee32",
+      "name": "Dumbbell Deadlift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-deadlift"
+    },
+    {
+      "id": "6c3ee31b-14f0-4fd9-af2d-a990a5e1364f",
+      "name": "Bridge",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Glutes",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "bridge"
+    },
+    {
+      "id": "99428dfb-f554-48f7-bb5d-35c0cbd706ad",
+      "name": "Leg Lift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Glutes",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "leg-lift"
+    },
+    {
+      "id": "b033e6cb-59a4-42d9-a0ab-699b65054d9c",
+      "name": "One Leg Kickback",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Glutes",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Intermediate",
+      "slug": "one-leg-kickback"
+    },
+    {
+      "id": "e9198f8f-1513-45ac-b52a-041c9675d6df",
+      "name": "Flutter Kick",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Glutes",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Beginner",
+      "slug": "flutter-kick"
+    },
+    {
+      "id": "be51d094-c8e3-4e78-8af1-65f63e5724cf",
+      "name": "Romanian Deadlift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Back",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "romanian-deadlift"
+    },
+    {
+      "id": "d8d197e8-a605-4169-8f14-b006de18e88d",
+      "name": "Cable Standing Leg Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-standing-leg-curl"
+    },
+    {
+      "id": "e8a4352d-2a71-42c4-896c-570110453914",
+      "name": "Dumbbell Walking Lunges",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-walking-lunges"
+    },
+    {
+      "id": "e2abfb6a-0855-46f7-b72e-af2408d1aa67",
+      "name": "Barbell Hack Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-hack-squat"
+    },
+    {
+      "id": "d7cf31a7-4bd1-4384-903c-f25be35e0dbd",
+      "name": "Smith Machine Hack Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-hack-squat"
+    },
+    {
+      "id": "b04b9bc1-a963-414a-a61d-78fe9463c3ce",
+      "name": "Barbell Side Split Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-side-split-squat"
+    },
+    {
+      "id": "fcdf1efd-692d-490a-885e-5ac809953a6b",
+      "name": "Barbell Single Leg Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-single-leg-squat"
+    },
+    {
+      "id": "fe3039f1-4870-4c15-8feb-f27e53064239",
+      "name": "Hip Adduction",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Glutes",
+      "otherMuscleGroups": [],
+      "type": "Stretching",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "hip-adduction"
+    },
+    {
+      "id": "d5c453d2-2236-4e03-a30d-7c985504ce07",
+      "name": "Barbell One Arm Snatch",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-one-arm-snatch"
+    },
+    {
+      "id": "04983209-090d-4c0c-b704-88ce5006f401",
+      "name": "Barbell One Leg Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-one-leg-squat"
+    },
+    {
+      "id": "ddc45d4e-1112-4fec-b6df-0e2e23c016c1",
+      "name": "Barbell Jefferson Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-jefferson-squat"
+    },
+    {
+      "id": "c76b342e-b8f8-44e2-8649-f5e76785a07c",
+      "name": "Dumbbell Iron Cross",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-iron-cross"
+    },
+    {
+      "id": "78464e5f-bfb8-40c0-8277-e805253e2703",
+      "name": "Barbell One Arm Side Deadlift",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-one-arm-side-deadlift"
+    },
+    {
+      "id": "48aa0550-c82a-4e58-91ca-7c3d94259c50",
+      "name": "Dumbbell Pile Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-pile-squat"
+    },
+    {
+      "id": "d8600b1c-460b-4c9a-87f7-e32c0ead41cb",
+      "name": "Barbell Speed Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-speed-squat"
+    },
+    {
+      "id": "4d5c5f79-5168-4253-9903-b623fb6dd5cb",
+      "name": "Thigh Abductor",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "thigh-abductor"
+    },
+    {
+      "id": "e363d9ea-def4-42ca-a51b-634b0b7de41d",
+      "name": "Thigh Adductor",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "thigh-adductor"
+    },
+    {
+      "id": "af4a4c01-5a07-432f-9831-bc92bff2a714",
+      "name": "Barbell Wide Stance Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-wide-stance-squat"
+    },
+    {
+      "id": "382372da-ec02-4bf3-9cdd-f4feabd0eb29",
+      "name": "Barbell Zercher Squat",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-zercher-squat"
+    },
+    {
+      "id": "6a99d90b-7faa-48f8-b5ab-c19e1465209c",
+      "name": "Seated Tricep Dip",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "seated-tricep-dip"
+    },
+    {
+      "id": "09d5710b-9a85-4254-8212-49742c25973c",
+      "name": "EZ Bar Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Intermediate",
+      "slug": "ez-bar-triceps-extension"
+    },
+    {
+      "id": "76c11220-e776-4a62-934e-9d4678a5b453",
+      "name": "Dumbbell Decline Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-decline-triceps-extension"
+    },
+    {
+      "id": "cdb8ccac-5cee-4deb-93de-6e41a446d6ca",
+      "name": "EZ Bar Decline Close Grip Skull Crusher",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Intermediate",
+      "slug": "ez-bar-decline-close-grip-skull-crusher"
+    },
+    {
+      "id": "3761a665-ad26-4ef6-a044-d4be3ebb31c4",
+      "name": "Cable Standing Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-standing-triceps-extension"
+    },
+    {
+      "id": "75df538f-a8af-4681-be05-4ff46fbcb0f9",
+      "name": "Cable One Arm Tricep Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-one-arm-tricep-extension"
+    },
+    {
+      "id": "9c230d47-3c55-4f72-9abd-ef4df1b3caaf",
+      "name": "Cable Lying Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-lying-triceps-extension"
+    },
+    {
+      "id": "bf94457e-c2f2-4b72-a4bd-c7f6e701db7d",
+      "name": "Cable Incline Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-incline-triceps-extension"
+    },
+    {
+      "id": "ab856d94-2d85-43a8-9d2f-bd440a1ffd7c",
+      "name": "Cable Tricep Incline Pushdown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-tricep-incline-pushdown"
+    },
+    {
+      "id": "95262ed5-bee4-4faa-8433-f32f4c0e4b7f",
+      "name": "Bench Dip",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "difficulty": "Intermediate",
+      "slug": "bench-dip"
+    },
+    {
+      "id": "c3e1ad88-71bc-45ee-b9b9-64b759d38318",
+      "name": "Dumbbell One Arm Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-triceps-extension"
+    },
+    {
+      "id": "18c019d2-29f3-40d1-ab8d-fb4240e84522",
+      "name": "EZ Bar Lying Close Grip Behind the Head Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Intermediate",
+      "slug": "ez-bar-lying-close-grip-behind-the-head-triceps-extension"
+    },
+    {
+      "id": "c2f935fe-3bcc-4835-b77c-1eda7887caa4",
+      "name": "Cable Low Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-low-triceps-extension"
+    },
+    {
+      "id": "8def5cc8-b506-4cb4-8af1-75575745d471",
+      "name": "Cable Kneeling Concentration Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-kneeling-concentration-triceps-extension"
+    },
+    {
+      "id": "64f344d2-ed8c-46ef-8bbf-50878c43cbee",
+      "name": "Dumbbell Lying Across Face Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lying-across-face-triceps-extension"
+    },
+    {
+      "id": "7eca76fd-f6fa-489f-ab7d-4f547b30c22d",
+      "name": "Dumbbell Lying Supine Two Arm Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lying-supine-two-arm-triceps-extension"
+    },
+    {
+      "id": "84e50cd0-c4cf-4c93-b512-3db7087ac316",
+      "name": "Barbell Lying Triceps Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-lying-triceps-press"
+    },
+    {
+      "id": "1c2cbf83-f432-410d-9458-d4c9db4625d0",
+      "name": "Dumbbell Single Arm Pronated Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-single-arm-pronated-triceps-extension"
+    },
+    {
+      "id": "8117578c-e927-4468-9e8e-664718d256d4",
+      "name": "Dumbbell Single Arm Supinated Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-single-arm-supinated-triceps-extension"
+    },
+    {
+      "id": "cf7c1975-f601-411f-af7e-3d82f8be1e9b",
+      "name": "Close Triceps Pushup",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Body",
+      "difficulty": "Intermediate",
+      "slug": "close-triceps-pushup"
+    },
+    {
+      "id": "d2d1dc14-e772-4bcc-93c0-66dad6cb8504",
+      "name": "Barbell Reverse Triceps Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-reverse-triceps-bench-press"
+    },
+    {
+      "id": "0149ddb3-1a8c-4580-88c0-d9c85299a6f2",
+      "name": "Dumbbell Tate Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-tate-press"
+    },
+    {
+      "id": "5a8db27a-ee2c-4e41-8921-910e00062dc9",
+      "name": "Barbell Standing Overhead Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-standing-overhead-triceps-extension"
+    },
+    {
+      "id": "f2f62c67-c8b5-411d-9c4d-850bc6716eb9",
+      "name": "Dumbbell Standing One Arm Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-standing-one-arm-triceps-extension"
+    },
+    {
+      "id": "2654e6a3-aa6d-4107-b84c-271edb9fb3bb",
+      "name": "Cable Standing One Arm Low Pulley Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-standing-one-arm-low-pulley-triceps-extension"
+    },
+    {
+      "id": "656aa639-943a-48eb-b49c-4802272c986d",
+      "name": "Dumbbell Standing Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-standing-triceps-extension"
+    },
+    {
+      "id": "fe04efd5-5525-47c4-aa90-f2b4ccfd1d32",
+      "name": "Smith Machine Close Grip Bench Press",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "smith-machine-close-grip-bench-press"
+    },
+    {
+      "id": "28408527-1ae9-4b5c-8553-0a04f46ed4c8",
+      "name": "Barbell Seated Overhead Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-seated-overhead-triceps-extension"
+    },
+    {
+      "id": "8da7482d-8cdf-40f5-8b68-33234bee505c",
+      "name": "Cable Triceps Pushdown",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-triceps-pushdown"
+    },
+    {
+      "id": "06592b34-1a6a-400e-8789-70640d59c7d3",
+      "name": "Dumbbell Incline Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-incline-triceps-extension"
+    },
+    {
+      "id": "f7f7944f-5ef0-4f89-9bd8-0ba4f8c08dd8",
+      "name": "Machine Triceps Extension",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "machine-triceps-extension"
+    },
+    {
+      "id": "63625677-6b02-4058-9844-c65109cce2a0",
+      "name": "Barbell Drag Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-drag-curl"
+    },
+    {
+      "id": "3aef1003-f816-41b4-8b73-f701f41d5fe5",
+      "name": "Cable Preacher Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-preacher-curl"
+    },
+    {
+      "id": "eee05113-8516-445f-bb46-e53db70fb1b5",
+      "name": "Cable Rope Hammer Curls",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-rope-hammer-curls"
+    },
+    {
+      "id": "057e7f56-8ed6-447a-9dff-daf69e16c914",
+      "name": "Barbell Lying High Bench Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-lying-high-bench-biceps-curl"
+    },
+    {
+      "id": "9c1034a6-0ca9-4771-a78e-9fd2e7644887",
+      "name": "Cable Lying Close Grip Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-lying-close-grip-biceps-curl"
+    },
+    {
+      "id": "5e9f3d78-7063-470a-aded-5c583ebba60c",
+      "name": "Cable Lying Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-lying-bicep-curl"
+    },
+    {
+      "id": "7e81c43b-c6b6-4232-b81c-6c84f4b04a9d",
+      "name": "Cable High Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Intermediate",
+      "slug": "cable-high-curl"
+    },
+    {
+      "id": "8594a3c3-25b8-4d45-8e05-73cad6c4e6de",
+      "name": "Dumbbell Flexor Incline Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-flexor-incline-curl"
+    },
+    {
+      "id": "f138d5fe-60d7-4af6-86d5-2199e1d63182",
+      "name": "Dumbbell Prone Incline Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-prone-incline-biceps-curl"
+    },
+    {
+      "id": "e5c6ce3c-27cd-4334-a358-cbaf8c5d6482",
+      "name": "Dumbbell Seated Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-seated-bicep-curl"
+    },
+    {
+      "id": "3b0a8711-a320-4022-82eb-468e195c4563",
+      "name": "EZ Bar Seated Close Grip Concentration Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "EZ Curl Bar",
+      "difficulty": "Beginner",
+      "slug": "ez-bar-seated-close-grip-concentration-curl"
+    },
+    {
+      "id": "777ca915-267e-4f82-b271-6226510defe8",
+      "name": "Dumbbell Preacher Hammer Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-preacher-hammer-curl"
+    },
+    {
+      "id": "8871c949-37f3-428f-8f66-937621e51058",
+      "name": "Preacher Curl Machine",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "preacher-curl-machine"
+    },
+    {
+      "id": "b2b8418b-a50b-49bc-aebe-b4dd656c8f5d",
+      "name": "Dumbbell Lying Supine Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-lying-supine-biceps-curl"
+    },
+    {
+      "id": "e2b53404-0d42-4a64-a4a5-470e32fb76c2",
+      "name": "Cable Standing One Arm Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "cable-standing-one-arm-bicep-curl"
+    },
+    {
+      "id": "88f220b0-ba6a-43cc-9bd5-4b588c7b209f",
+      "name": "Dumbbell Preacher Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner",
+      "slug": "dumbbell-preacher-curl"
+    },
+    {
+      "id": "3c2dca41-443c-45bb-8fe0-538f53de1b82",
+      "name": "Barbell Standing Wide Grip Biceps Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Beginner",
+      "slug": "barbell-standing-wide-grip-biceps-curl"
+    },
+    {
+      "id": "47bbb6eb-0b3c-49d7-b301-2b120a09efb0",
+      "name": "Dumbbell Zottman Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-zottman-curl"
+    },
+    {
+      "id": "31d4ca88-2295-4ff5-8a73-ad86ad4bd86a",
+      "name": "Dumbbell One Arm Zottman Preacher Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-one-arm-zottman-preacher-curl"
+    },
+    {
+      "id": "057a4405-2e2f-4db4-9e49-9ffe8e6c6cf4",
+      "name": "Bicep Curl Machine",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Machine",
+      "difficulty": "Beginner",
+      "slug": "bicep-curl-machine"
+    },
+    {
+      "id": "f9310d6f-b38f-48ed-a026-e9cb3830319c",
+      "name": "Barbell One Arm Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Arms",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "slug": "barbell-one-arm-bicep-curl"
+    },
+    {
+      "id": "759889e0-2451-4dd9-bf30-a043322a071c",
+      "name": "Dumbbell Lateral Lunge with Bicep Curl",
+      "allowedMethods": [
+        "sri"
+      ],
+      "mainMuscleGroup": "Thighs",
+      "otherMuscleGroups": [],
+      "type": "Strength",
+      "equipment": "Dumbbell",
+      "difficulty": "Intermediate",
+      "slug": "dumbbell-lateral-lunge-with-bicep-curl"
+    }
+  ]
+}

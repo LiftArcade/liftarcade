@@ -2,7 +2,7 @@
 	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { Trash } from 'svelte-heros';
+	import { Trash } from 'lucide-svelte';
 
 	export let data;
 

@@ -8,7 +8,7 @@
 	import { cubicOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
-	import { XMark, Bars3, PlusCircle } from 'svelte-heros';
+	import { X, Menu, PlusCircle } from 'lucide-svelte';
 	import Logo from '$lib/assets/logo.svg';
 	import LogoDark from '$lib/assets/logo-dark.svg';
 	import Avatar from '../ui/avatar.svelte';
@@ -88,7 +88,7 @@
 					>
 						<button type="button" class="-m-2.5 p-2.5" on:click={toggleShowSidebar}>
 							<span class="sr-only">Close sidebar</span>
-							<XMark class="h-6 w-6 text-white" />
+							<X class="h-6 w-6 text-white" />
 						</button>
 					</div>
 
@@ -232,7 +232,7 @@
 				on:click={toggleShowSidebar}
 			>
 				<span class="sr-only">Open sidebar</span>
-				<Bars3 variation="outline" class="h-6 w-6" />
+				<Menu class="h-6 w-6" />
 			</button>
 		</div>
 	</div>

@@ -1,17 +1,18 @@
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ locals }) => {
-	const session = await locals.getSession();
-	const user = session?.user;
-
-	const currentUserProfile = {
-		id: user?.id,
-		name: user?.name,
-		email: user?.email,
-		image: user?.image
-	};
+	const currentUserProfile = locals.getSession().then((session) => {
+		return {
+			id: session?.user?.id,
+			name: session?.user?.name,
+			email: session?.user?.email,
+			image: session?.user?.image
+		};
+	});
 
 	return {
-		currentUserProfile
+		promised: {
+			currentUserProfile
+		}
 	};
 };

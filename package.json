@@ -8,11 +8,10 @@
         "packages/*"
     ],
     "dependencies": {
-        "@manypkg/cli": "^0.21.0",
-        "@preconstruct/cli": "^2.7.0"
+        "@preconstruct/cli": "^2.8.1"
     },
     "scripts": {
-        "postinstall": "preconstruct dev && manypkg check",
+        "postinstall": "preconstruct dev",
         "build": "preconstruct build"
     },
     "preconstruct": {
