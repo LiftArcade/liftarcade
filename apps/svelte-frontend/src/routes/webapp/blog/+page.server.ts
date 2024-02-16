@@ -2,7 +2,7 @@
 
 import fm from 'front-matter';
 import { readdirSync, readFileSync } from 'node:fs';
-export const prerender = true;
+// export const prerender = true;
 
 export const load = async () => {
 	const allofPosts = readdirSync('_posts/');

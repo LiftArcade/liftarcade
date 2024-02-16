@@ -27,9 +27,3 @@
 </header>
 
 <slot />
-
-<style>
-	:global(body) {
-		@apply bg-zinc-900;
-	}
-</style>

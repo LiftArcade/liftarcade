@@ -1,7 +1,7 @@
 import fm from 'front-matter';
 import { readFileSync } from 'node:fs';
 import markdown from 'markdown-it';
-export const prerender = true;
+// export const prerender = true;
 
 export const load = async ({ params }) => {
 	const slug = params.post;

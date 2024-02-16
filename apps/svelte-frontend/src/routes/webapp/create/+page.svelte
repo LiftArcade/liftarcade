@@ -6,7 +6,7 @@
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { workout, addActivity, reset } from '$lib/stores/workout.store.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { exercises } from '@liftarcade/exercises-lib';
+	// import { exercises } from '@liftarcade/exercises-lib';
 	import { Plus, Trash } from 'lucide-svelte';
 	import { typeid } from 'typeid-js';
 
@@ -116,9 +116,3 @@
 		{/each}
 	</div>
 </div>
-
-<style lang="postcss">
-	input {
-		@apply border bg-gray-50 dark:bg-gray-900 dark:border-gray-800 rounded-md h-9 px-3;
-	}
-</style>

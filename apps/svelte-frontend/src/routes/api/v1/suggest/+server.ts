@@ -15,8 +15,8 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	try {
 		// Validate the required query string parameters
-		if (!exercise) throw error(501, 'Missing exercise');
-		if (!strengthLevel) throw error(501, 'Missing strLevel');
+		if (!exercise) error(501, 'Missing exercise');
+		if (!strengthLevel) error(501, 'Missing strLevel');
 
 		// If the user's body weight is in kg, convert it to lbs
 		const convertedBodyWeight = convertWeight(
