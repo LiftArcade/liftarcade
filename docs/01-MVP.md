@@ -19,12 +19,12 @@ Right now, many workouts are created and shared on Excel sheets, which offer lim
 There are several foreseeable benefits from recording and analyzing workouts, including:
 
 - Beginners
-    - **Recommended weight:** When starting out, it can be a series of trial and error finding the right weight to use. With AI assistance, it can suggest the correct weight to use to achieve the right intensity.
-    - **Volume Management:** Ensure that users are hitting all muscle groups at an adequate volume to ensure improvements all around.
-    - **Overall confidence:** Progress can be slow. Beginners need to know that they are adequately using and improving the right amount so they don't "Program Hop" or give up when not seeing improvements rapidly.
+  - **Recommended weight:** When starting out, it can be a series of trial and error finding the right weight to use. With AI assistance, it can suggest the correct weight to use to achieve the right intensity.
+  - **Volume Management:** Ensure that users are hitting all muscle groups at an adequate volume to ensure improvements all around.
+  - **Overall confidence:** Progress can be slow. Beginners need to know that they are adequately using and improving the right amount so they don't "Program Hop" or give up when not seeing improvements rapidly.
 - Intermediate users
-    - **Individual Muscle Management:** This is where we can help users the most. Planning workouts and monitoring individual muscle volume from week to week can help keep them on track and give intermediate users areas they can improve upon by ensuring no weak spots exist.
-    - **Planning Assistant:** Create your own workouts, seeing total and individual workout volume for your created workout. Helps to quickly adjust and tailor your workouts to your own goals.
+  - **Individual Muscle Management:** This is where we can help users the most. Planning workouts and monitoring individual muscle volume from week to week can help keep them on track and give intermediate users areas they can improve upon by ensuring no weak spots exist.
+  - **Planning Assistant:** Create your own workouts, seeing total and individual workout volume for your created workout. Helps to quickly adjust and tailor your workouts to your own goals.
 
 ## Advanced users
 

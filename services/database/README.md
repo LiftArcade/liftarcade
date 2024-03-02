@@ -1,25 +1,17 @@
-// This is the schema declaration / migrations manager for the database.
+# How to use
 
-## How to use
+In early development (destructive actions can happen):
 
-### Client
-```js
-import { DrizzlePostgresClient } from 'services/database/src/client';
+1. Make changes to the schema / data.
+2. push the changes and alter the table (potentially destructive step) with `db:push` command.
 
-const db = new DrizzlePostgresClient({ databaseString: _YOUR DATABASE STRING_ });
+### Review the database:
 
-db.queryClient.query('SELECT * FROM users WHERE id = $1', [1]);
-```
+`pnpm drizzle-kit studio`
 
-### Server
+// TODO:
 
-This is mostly using drizzleKit to keep and maintain the database schema.
-
-_Note this currently does not support push:postgres_
-
-Tracking issue: https://orm.drizzle.team/kit-docs/commands#prototype--push
-
-currently you can use the following commands:
+- [ ] Describe production usage
 
 ```bash
 # Create a new migration
@@ -28,10 +20,9 @@ pnpm run db:pull
 
 # Make changes to the schema
 
-# Create a new migration 
+# Create a new migration
 pnpm run db:migrate
 
 # Run the migrations - Update the Neon database with the new schema
 pnpm run db:push
 ```
-

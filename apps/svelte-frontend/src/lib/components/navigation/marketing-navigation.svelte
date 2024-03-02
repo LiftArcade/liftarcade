@@ -154,7 +154,7 @@
 				>Go To Dashboard <span class="ml-1">&rarr;</span></a
 			>
 			<button class={buttonVariants({ variant: 'outline', size: 'icon-lg' })}>
-				<Sun tabindex="-1" class="h-6 w-6 outline-none" />
+				<Sun tabindex={-1} class="h-6 w-6 outline-none" />
 			</button>
 		</div>
 	</div>

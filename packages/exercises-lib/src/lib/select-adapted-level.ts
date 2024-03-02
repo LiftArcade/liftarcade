@@ -1,4 +1,4 @@
-import { Profile } from './profile'
+import type { Profile } from "./profile";
 
 function selectAdaptedLevel(
   exerciseID: string,
@@ -9,20 +9,20 @@ function selectAdaptedLevel(
   if (userStrengthProfile.virtualPrs) {
     const virtualPR = userStrengthProfile.virtualPrs.find(
       (pr) => pr.exerciseID === exerciseID
-    )
-    if (virtualPR?.weight?.value) return virtualPR.weight.value
+    );
+    if (virtualPR?.weight?.value) return virtualPR.weight.value;
   }
 
   if (userStrengthProfile.muscleSpecificStrLvl) {
     const musclePR = userStrengthProfile.muscleSpecificStrLvl.find(
       (pr) => pr?.muscle === muscle
-    )
-    if (musclePR?.strLvl) return musclePR.strLvl
+    );
+    if (musclePR?.strLvl) return musclePR.strLvl;
   }
 
-  if (userStrengthProfile.baseStrLvl) return userStrengthProfile.baseStrLvl
+  if (userStrengthProfile.baseStrLvl) return userStrengthProfile.baseStrLvl;
 
-  throw new Error('Unable to find anything.')
+  throw new Error("Unable to find anything.");
 }
 
-export default selectAdaptedLevel
+export default selectAdaptedLevel;

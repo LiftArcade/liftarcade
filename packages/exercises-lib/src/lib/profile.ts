@@ -1,31 +1,30 @@
-import { MuscleGroup } from './muscle'
-import { Weight } from './weight'
+import type { MuscleGroup } from "./muscle";
+import type { Weight } from "./weight";
 
 // Personal Records (PR) are the best weights that a user has lifted for a given exercise.
 // Using this data, we can individualize the recommended weights for a user down to the user.
 type PersonalRecord = {
-  exerciseID: string // The ID of the exercise.
-  weight: Weight
-}
+  exerciseID: string; // The ID of the exercise.
+  weight: Weight;
+};
 
 type MuscleSpecificStringLvl = {
-  muscle: MuscleGroup
-  strLvl: number // 0-100 Marks the relative level of strength of the user in the muscle group.
-}
+  muscle: MuscleGroup;
+  strLvl: number; // 0-100 Marks the relative level of strength of the user in the muscle group.
+};
 
 // In the Profile, we have a list of real PRs, a list of virtual PRs, a list of muscle specific strength levels, and a base strength level.
 export type Profile = {
-  realPrs: PersonalRecord[]
-  virtualPrs: PersonalRecord[]
-  muscleSpecificStrLvl: MuscleSpecificStringLvl[]
-  baseStrLvl: number // 0-100 Marks the relative level of strength of the user.
-}
+  realPrs: PersonalRecord[];
+  virtualPrs: PersonalRecord[];
+  muscleSpecificStrLvl: MuscleSpecificStringLvl[];
+  baseStrLvl: number; // 0-100 Marks the relative level of strength of the user.
+};
 
-import { estimatePrLevel } from './regression'
-import { estimateStrengthLevel } from './reverse-regression'
-import type { PersonalRecord } from './types'
+import { estimatePrLevel } from "./regression";
+import { estimateStrengthLevel } from "./reverse-regression";
 
-const MAJOR_MUSCLE_GROUPS = ['Arms', 'Chest', 'Back', 'Glutes', 'Legs', 'Core']
+const MAJOR_MUSCLE_GROUPS = ["Arms", "Chest", "Back", "Glutes", "Legs", "Core"];
 
 /**
  * Given a list of personal records, this builds an internal representation of the strength profile.
@@ -60,47 +59,47 @@ const MAJOR_MUSCLE_GROUPS = ['Arms', 'Chest', 'Back', 'Glutes', 'Legs', 'Core']
 //  generalLevel: number
 //  muscleLevel: number
 // }
-const DEFAULT_USER_WEIGHT = 180
-const INCREMENT_VALUE = 1
+const DEFAULT_USER_WEIGHT = 180;
+const INCREMENT_VALUE = 1;
 
 export default class StrengthProfile {
-  public personalRecords: PersonalRecord[] = []
+  public personalRecords: PersonalRecord[] = [];
 
-  public userWeight
+  public userWeight;
 
-  private coreLevel = 0
+  private coreLevel = 0;
 
-  private muscleLevels: Record<string, number> = {}
+  private muscleLevels: Record<string, number> = {};
 
   public constructor(prs: PersonalRecord[], userWeight?: number) {
-    this.personalRecords = prs
-    this.userWeight = userWeight ?? DEFAULT_USER_WEIGHT
-    this.calculateCoreLevel()
+    this.personalRecords = prs;
+    this.userWeight = userWeight ?? DEFAULT_USER_WEIGHT;
+    this.calculateCoreLevel();
     // This.calculateMuscleLevels();
-    console.debug(this)
+    console.debug(this);
   }
 
   private calculateCoreLevel(): void {
     // Sets the base of corelevel to evenrtually addto and average.
-    let averageLevel = 0
-    let count = 0
+    let averageLevel = 0;
+    let count = 0;
 
     // Iterates through each supplied Personal Record.
     for (const pr of this.personalRecords) {
-      const { id, weight } = pr
-      if (!id || !weight) return
+      const { exerciseID, weight } = pr;
+      if (!exerciseID || !weight) return;
 
-      estimateStrengthLevel(id, weight, {
+      estimateStrengthLevel(exerciseID, weight.value, {
         value: this.userWeight,
-        unit: 'lb',
+        unit: "lb",
       }).then((result) => {
-        averageLevel += result // Add it to the average.
-        count += INCREMENT_VALUE // Increment the count.
-      })
+        averageLevel += result; // Add it to the average.
+        count += INCREMENT_VALUE; // Increment the count.
+      });
     }
 
     // Divide the average by the number of personal records to get the core level.
-    this.coreLevel = averageLevel / count
+    this.coreLevel = averageLevel / count;
   }
 
   // Private calculateMuscleLevels(): void {
@@ -147,8 +146,8 @@ export default class StrengthProfile {
       exerciseID,
       this.coreLevel,
       this.userWeight
-    )
+    );
 
-    return estimate
+    return estimate;
   }
 }

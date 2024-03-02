@@ -52,7 +52,7 @@ export const GET: RequestHandler = async ({ url }) => {
 				'cache-control': 'private, max-age=3600, s-maxage=86400'
 			}
 		});
-	} catch (error_) {
-		return new Response(error_.message);
+	} catch {
+		return new Response('An unknown error has occured.');
 	}
 };

@@ -1,16 +1,25 @@
 <script lang="ts">
 	import type { workout as drizzleWorkout } from '@liftarcade/services-database';
-	import type { InferModel } from 'drizzle-orm';
 	import { extractUUID } from '$lib/utils/typeid';
+	import { getLocalTimeZone, parseDate } from '@internationalized/date';
 
 	// Switch to handling the logic of display of workout internally.
-	export let workout: InferModel<typeof drizzleWorkout> | undefined;
+	export let workout: typeof drizzleWorkout.$inferSelect;
 
 	// Extract activity names
 	let exerciseNames = workout?.activitiesJSON?.map((activity) => activity.exercise.name) ?? [];
 
-	// Get the first three exercise names as a preview
-	let dateString = workout?.performed_at?.toLocaleDateString() ?? '';
+	console.log('Workout', workout);
+
+	// Make the date completed Pretty.
+	let dateString = parseDate(workout?.performed_at)
+		.toDate(getLocalTimeZone())
+		.toLocaleDateString(undefined, {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric'
+		});
+
 	let exerciseString = exerciseNames.slice(0, 3).join(', ');
 	let href = `/dashboard/workouts/${extractUUID(workout?.id)}`;
 	$: {

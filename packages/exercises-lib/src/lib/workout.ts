@@ -1,15 +1,13 @@
-import { v4 as uuidv4 } from 'uuid'
-
-import type { Activity } from './activity'
-import { MuscleGroup } from './muscle'
-import { convertWeight } from './weight'
+import type { Activity } from "./activity";
+import type { MuscleGroup } from "./muscle";
+import { convertWeight } from "./weight";
 
 export type Workout = {
-  performedAt: string // ISO 8601
-  name?: string
-  activities: Activity[]
-  notes?: string
-}
+  performedAt: string; // ISO 8601
+  name?: string;
+  activities: Activity[];
+  notes?: string;
+};
 
 /**
  * Calculates the total volume of the workout performed.
@@ -21,10 +19,12 @@ export function getTotalVolumeOfWorkout(workout: Workout): number {
     workout.activities.reduce(
       (total, activity) =>
         total +
-        activity.sets * activity.reps * convertWeight(activity.weight, 'kg'),
+        activity.sets *
+          activity.reps *
+          convertWeight(activity.weight, "kg").value,
       0
     ) / 1000
-  )
+  );
 }
 
 export function getMuscleSpecificVolumeOfWorkout(
@@ -37,21 +37,13 @@ export function getMuscleSpecificVolumeOfWorkout(
       if (activity.exercise.muscles.includes(muscle)) {
         return (
           total +
-          activity.sets * activity.reps * convertWeight(activity.weight, 'kg')
-        )
+          activity.sets *
+            activity.reps *
+            convertWeight(activity.weight, "kg").value
+        );
       }
 
-      return total
+      return total;
     }, 0) / 1000
-  )
-}
-
-// Allow user to create a new workout.
-export function createWorkout(owner: string): Workout {
-  return {
-    id: uuidv4(),
-    datePerformed: new Date().toISOString(),
-    activities: [],
-    owner,
-  }
+  );
 }

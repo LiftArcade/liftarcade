@@ -6,17 +6,20 @@ import {
   integer,
   primaryKey,
   json,
+  date,
 } from "drizzle-orm/pg-core";
-import type { AdapterAccount } from "@auth/core/adapters";
-import { Activity } from "./types";
+import type { Activity } from "./types";
+import { typeid } from "typeid-js";
 
 export const workout = pgTable("workout", {
-  id: text("id").notNull().primaryKey(),
-  public_id: varchar("public_id", { length: 14 }),
+  id: text("id")
+    .notNull()
+    .primaryKey()
+    .$default(() => typeid("workout").toString()),
   owner_id: text("owner_id").notNull(),
   created_at: timestamp("created_at").notNull().defaultNow(),
   updated_at: timestamp("updated_at").notNull().defaultNow(),
-  performed_at: timestamp("performed_at").notNull(),
+  performed_at: date("performed_at", { mode: "string" }).notNull(),
   activitiesJSON: json("activitiesJSON").$type<Activity[]>(),
 });
 
@@ -30,51 +33,25 @@ export const userProfile = pgTable("user_profile", {
 });
 
 export const users = pgTable("users", {
-  id: text("id").notNull().primaryKey(),
+  id: text("id")
+    .notNull()
+    .primaryKey()
+    .$default(() => typeid("user").toString()),
   name: text("name"),
   email: text("email").notNull(),
-  emailVerified: timestamp("emailVerified", { mode: "date" }),
   image: text("image"),
-});
 
-export const accounts = pgTable(
-  "accounts",
-  {
-    userId: text("userId")
-      .notNull()
-      .references(() => users.id, { onDelete: "cascade" }),
-    type: text("type").$type<AdapterAccount["type"]>().notNull(),
-    provider: text("provider").notNull(),
-    providerAccountId: text("providerAccountId").notNull(),
-    refresh_token: text("refresh_token"),
-    access_token: text("access_token"),
-    expires_at: integer("expires_at"),
-    token_type: text("token_type"),
-    scope: text("scope"),
-    id_token: text("id_token"),
-    session_state: text("session_state"),
-  },
-  (account) => ({
-    compoundKey: primaryKey(account.provider, account.providerAccountId),
-  })
-);
+  // OAuth sections
+  facebook_id: text("facebook_id"),
+});
 
 export const sessions = pgTable("sessions", {
-  sessionToken: text("sessionToken").notNull().primaryKey(),
-  userId: text("userId")
+  id: text("id").primaryKey(),
+  userId: text("user_id")
     .notNull()
-    .references(() => users.id, { onDelete: "cascade" }),
-  expires: timestamp("expires", { mode: "date" }).notNull(),
+    .references(() => users.id),
+  expiresAt: timestamp("expires_at", {
+    withTimezone: true,
+    mode: "date",
+  }).notNull(),
 });
-
-export const verificationTokens = pgTable(
-  "verificationToken",
-  {
-    identifier: text("identifier").notNull(),
-    token: text("token").notNull(),
-    expires: timestamp("expires", { mode: "date" }).notNull(),
-  },
-  (vt) => ({
-    compoundKey: primaryKey(vt.identifier, vt.token),
-  })
-);

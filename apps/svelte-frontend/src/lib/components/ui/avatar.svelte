@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
 	import { cva, type VariantProps } from 'class-variance-authority';
+	import { melt } from '@melt-ui/svelte';
 
 	export const avatarVariants = cva('flex items-center justify-center rounded-full bg-border', {
 		variants: {
@@ -21,21 +22,22 @@
 </script>
 
 <script lang="ts">
-	let { src, initial, size = '32' } : {
+	let {
+		src,
+		initial,
+		size = '32'
+	} = $props<{
 		src: string;
 		initial: string;
 		size?: VariantProps<typeof avatarVariants>['size'];
-	} = $props();
+	}>();
 
 	import { createAvatar } from '@melt-ui/svelte';
 
-	const { 
-		elements: {
-			image,
-			fallback
-		}
+	const {
+		elements: { image, fallback }
 	} = createAvatar({
-		src,
+		src
 	});
 </script>
 

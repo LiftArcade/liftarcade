@@ -1,16 +1,14 @@
 <script lang="ts">
-	let {
-		currentPath,
-		currentUser
-	}: {
-		currentPath: string;
-		currentUser: Promise<{
+	import { page } from '$app/stores';
+
+	let { user } = $props<{
+		user: {
 			id: string;
-			name: string;
-			email: string;
-			image: string;
-		}>;
-	} = $props();
+			name?: string | null;
+			email?: string | null;
+			image?: string | null;
+		};
+	}>();
 
 	import Logo from '$lib/assets/logo.svg';
 	import LogoDark from '$lib/assets/logo-dark.svg';
@@ -24,21 +22,21 @@
 			id: 'dashboard',
 			href: '/dashboard',
 			title: 'Dashboard',
-			activeMatch: /^\/dashboard$/.test(currentPath),
+			activeMatch: /^\/dashboard$/.test($page.url.pathname),
 			icon: PieChart
 		},
 		{
 			id: 'profile',
 			title: 'Profile',
 			href: '/dashboard/profile',
-			activeMatch: /^\/dashboard\/profile/.test(currentPath),
+			activeMatch: /^\/dashboard\/profile/.test($page.url.pathname),
 			icon: UserCircle
 		},
 		{
 			id: 'workouts',
 			title: 'My Workouts',
 			href: '/dashboard/workouts',
-			activeMatch: /^\/dashboard\/workouts/.test(currentPath),
+			activeMatch: /^\/dashboard\/workouts/.test($page.url.pathname),
 			icon: ListOrdered
 		}
 	]);
@@ -48,14 +46,14 @@
 			id: 'exercises',
 			href: '/explore/exercises',
 			title: 'Exercises',
-			activeMatch: /^\/explore\/exercises/.test(currentPath),
+			activeMatch: /^\/explore\/exercises/.test($page.url.pathname),
 			icon: PieChart
 		},
 		{
 			id: 'workouts',
 			title: 'Workouts',
 			href: '/explore/workouts',
-			activeMatch: /^\/explore\/workouts/.test(currentPath),
+			activeMatch: /^\/explore\/workouts/.test($page.url.pathname),
 			icon: ListOrdered
 		}
 	]);
@@ -64,7 +62,7 @@
 		id: ' addWorkout',
 		href: '/create',
 		title: 'Add workout',
-		activeMatch: /^\/create/.test(currentPath),
+		activeMatch: /^\/create/.test($page.url.pathname),
 		icon: PlusCircle
 	});
 
@@ -72,7 +70,7 @@
 		id: 'settings',
 		href: '/settings',
 		title: 'Settings',
-		activeMatch: /^\/dashboard\/settings/.test(currentPath),
+		activeMatch: /^\/dashboard\/settings/.test($page.url.pathname),
 		icon: SettingsIcon
 	});
 
@@ -81,13 +79,13 @@
 			id: 'blog',
 			title: 'Blog',
 			href: '/blog',
-			activeMatch: /^\/blog/.test(currentPath),
+			activeMatch: /^\/blog/.test($page.url.pathname),
 			icon: Rss
 		}
 	]);
 </script>
 
-<div class="grid grid-cols-[288px_auto] xl:grid-cols-[288px_auto_288px]">
+<div class="grid grid-cols-[288px_auto]">
 	<div class="sticky top-0 z-50 flex flex-col h-screen">
 		<!-- Sidebar component, swap this element with another sidebar if you like -->
 		<div class="flex grow flex-col bg-surface border-r border-border px-6 pb-4">
@@ -95,7 +93,6 @@
 				<a class="flex items-center space-x-4" href="/">
 					<img src={Logo} class="dark:hidden h-9 w-9" alt="LiftArcade Check" />
 					<img src={LogoDark} class="dark:block hidden h-9 w-9" alt="LiftArcade Check" />
-					<div class="tracking-widest uppercase text-xs font-bold text-text">LIFTARCADE</div>
 				</a>
 			</div>
 			<nav class="flex flex-1 flex-col gap-y-4">
@@ -163,8 +160,8 @@
 				</ul>
 
 				<ul role="list" class="flex shrink-0 flex-col gap-y-3">
-					{#each otherLinks as navItem, i}
-						<li class={i === otherLinks.length - 1 ? '!mt-auto' : ''}>
+					{#each otherLinks as navItem, index}
+						<li class={index === otherLinks.length - 1 ? '!mt-auto' : ''}>
 							<a
 								href={navItem.href}
 								class={cn(
@@ -186,40 +183,36 @@
 				<hr class="border-border" />
 				<ul role="list" class="flex shrink-0 flex-col gap-y-3">
 					<li class="h-12">
-						{#await currentUser}
-							<div>Loading...</div>
-						{:then user}
-							{#if user?.email}
-								<a
-									href={settingsLink.href}
-									class={cn(
-										'group -mx-2 flex items-center gap-x-1 rounded-md p-2 text-sm leading-6 font-semibold h-12 hover:bg-border'
-									)}
-								>
-									<div class="grow h-8 justify-start items-center gap-3 flex">
-										<Avatar src={user.image} initial="BM" />
-										<div class="flex-col justify-start items-start inline-flex">
-											<div class="text-text text-xs font-semibold">{user.name}</div>
-											<div class="text-text-muted text-xs font-normal">Novice</div>
-										</div>
+						{#if user && user?.email}
+							<a
+								href={settingsLink.href}
+								class={cn(
+									'group -mx-2 flex items-center gap-x-1 rounded-md p-2 text-sm leading-6 font-semibold h-12 hover:bg-border'
+								)}
+							>
+								<div class="grow h-8 justify-start items-center gap-3 flex">
+									<Avatar src={user.image || ''} initial="BM" />
+									<div class="flex-col justify-start items-start inline-flex">
+										<div class="text-text text-xs font-semibold">{user.name}</div>
+										<div class="text-text-muted text-xs font-normal">Novice</div>
 									</div>
-									<div
-										class="w-8 h-4 bg-gray-900 rounded-3xl justify-center items-center gap-2.5 flex"
-									>
-										<div class="text-white text-xs font-semibold leading-3">Pro</div>
-									</div>
-								</a>
-							{:else}
-								<a
-									href="/signin"
-									class={cn(
-										'-mx-2 flex justify-center rounded-md p-2 text-sm leading-6 font-semibold bg-primary text-white'
-									)}
+								</div>
+								<div
+									class="w-8 h-4 bg-gray-900 rounded-3xl justify-center items-center gap-2.5 flex"
 								>
-									Sign in with social &rarr;
-								</a>
-							{/if}
-						{/await}
+									<div class="text-white text-xs font-semibold leading-3">Pro</div>
+								</div>
+							</a>
+						{:else}
+							<a
+								href="/signin"
+								class={cn(
+									'-mx-2 flex justify-center rounded-md p-2 text-sm leading-6 font-semibold bg-primary text-white'
+								)}
+							>
+								Sign in with social &rarr;
+							</a>
+						{/if}
 					</li>
 				</ul>
 			</nav>
@@ -250,12 +243,7 @@
 		</div>
 	</div>
 
-	<main class="py-10">
+	<main class="py-16">
 		<slot />
 	</main>
-	<div class="py-10 hidden xl:block">
-		<div class="px-4 sm:px-6 lg:px-8">
-			<slot name="right" />
-		</div>
-	</div>
 </div>

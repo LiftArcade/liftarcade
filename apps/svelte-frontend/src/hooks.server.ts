@@ -1,56 +1,43 @@
 import { sequence } from '@sveltejs/kit/hooks';
-import { SvelteKitAuth } from '@auth/sveltekit';
-import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET, NEXTAUTH_SECRET } from '$env/static/private';
-import { dbForServerHandle, pgDrizzleAdapter } from '$lib/utils/db';
+import { dbClient } from '$lib/utils/db';
+import { lucia } from '$lib/utils/auth';
 import type { Handle } from '@sveltejs/kit';
-import Facebook from '@auth/core/providers/facebook';
-import type { Provider } from '@auth/core/providers';
-
-// Import authentication handle from apps/svelte-frontend/src/lib/authentication.ts
 
 const attachDatabaseServerHandle = (async ({ event, resolve }) => {
-	const drizzleDB = dbForServerHandle;
+	const drizzleDB = dbClient;
 	event.locals.drizzleDB = drizzleDB;
 	const response = await resolve(event);
 	return response;
 }) satisfies Handle;
 
-const authHandle = SvelteKitAuth({
-	adapter: pgDrizzleAdapter(dbForServerHandle),
-	secret: NEXTAUTH_SECRET,
-	session: {
-		strategy: 'jwt'
-	},
-	providers: [
-		Facebook({
-			clientId: FACEBOOK_CLIENT_ID,
-			clientSecret: FACEBOOK_CLIENT_SECRET
-		}) as Provider
-	],
-	callbacks: {
-		async session({ session, token }) {
-			if (token && session.user) {
-				session.user.id = token.sub;
-				session.user.name = token.name;
-				session.user.email = token.email;
-				session.user.image = token.picture;
-			}
+const authHandle: Handle = async ({ event, resolve }) => {
+	const sessionId = event.cookies.get(lucia.sessionCookieName);
+	if (!sessionId) {
+		event.locals.user = null;
+		event.locals.session = null;
+		return resolve(event);
+	}
 
-			return session;
-		},
-		async jwt({ token, user }) {
-			if (user) {
-				token.id = user?.id;
-			}
-			return token;
-		}
-	},
-	trustHost: true
-}) satisfies Handle;
-
-// export const authHandle = (async ({ event, resolve }) => {
-// 	event.locals.auth = auth.handleRequest(event);
-// 	return await resolve(event);
-// }) satisfies Handle;
+	const { session, user } = await lucia.validateSession(sessionId);
+	if (session && session.fresh) {
+		const sessionCookie = lucia.createSessionCookie(session.id);
+		// sveltekit types deviates from the de-facto standard
+		// you can use 'as any' too
+		event.cookies.set(sessionCookie.name, sessionCookie.value, {
+			path: '.',
+			...sessionCookie.attributes
+		});
+	}
+	if (!session) {
+		const sessionCookie = lucia.createBlankSessionCookie();
+		event.cookies.set(sessionCookie.name, sessionCookie.value, {
+			path: '.',
+			...sessionCookie.attributes
+		});
+	}
+	event.locals.user = user;
+	event.locals.session = session;
+	return resolve(event);
+};
 
 export const handle = sequence(attachDatabaseServerHandle, authHandle);

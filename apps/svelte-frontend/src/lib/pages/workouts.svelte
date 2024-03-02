@@ -3,16 +3,15 @@
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { containerVariants } from '$lib/components/ui/container.svelte';
 	import { cn } from '$lib/utils/cn';
-	import type { workout } from '@liftarcade/services-database';
 
-	import type { InferSelectModel } from 'drizzle-orm';
+	import type { workout } from '@liftarcade/services-database';
 
 	let {
 		promisedWorkouts,
 		currentPath,
 		currentWorkoutPage = 0
 	} = $props<{
-		promisedWorkouts: Promise<InferSelectModel<typeof workout>[] | undefined>;
+		promisedWorkouts: Promise<(typeof workout.$inferSelect)[]>;
 		currentWorkoutPage: number;
 		currentPath: string;
 	}>();

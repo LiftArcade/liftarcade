@@ -7,9 +7,10 @@
 	import { MessageSquareIcon } from 'lucide-svelte';
 	import { buttonVariants } from './button.svelte';
 
-	const feedbackModalBuilder = createDialog();
-	export const { trigger, portal, overlay, content, title, description, close, open } =
-		feedbackModalBuilder;
+	export const {
+		elements: { trigger, portalled, overlay, content, title, description, close },
+		states: { open }
+	} = createDialog();
 </script>
 
 <button
@@ -17,10 +18,10 @@
 	use:trigger
 	class="flex items-center text-sm text-text-muted space-x-2 font-medium hover:text-text rounded-lg px-3 py-1 active:opacity-90"
 >
-	<MessageSquareIcon tabindex="-1" variation="outline" class="h-5 w-5" />
+	<MessageSquareIcon tabindex={-1} class="h-5 w-5" />
 	<div>Feedback</div>
 </button>
-<div use:portal>
+<div use:portalled>
 	{#if $open}
 		<div {...$overlay} class="fixed inset-0 z-40 bg-black/50" />
 		<div

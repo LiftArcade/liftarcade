@@ -1,11 +1,7 @@
 <script lang="ts">
-	export let title: string,
-		slug: string | undefined = undefined,
-		pretitle = 'Article',
-		excerpt: string,
-		coverImage = '',
-		authors = [],
-		createdAt;
+	import type { BlogPost } from '$lib/types/blog-post';
+
+	let { title, pretitle, excerpt, coverImage, authors, createdAt } = $props<BlogPost>();
 
 	let formattedDate = new Date(createdAt || '').toLocaleDateString('en-US', {
 		month: 'long',
@@ -16,7 +12,7 @@
 
 <div class="space-y-12">
 	<div class="space-y-4">
-		<div class="font-mono text-base font-bold uppercase text-orange-300">
+		<div class="font-mono text-base font-bold uppercase text-blue-500 dark:text-orange-500">
 			// {pretitle}
 		</div>
 
@@ -68,6 +64,6 @@
 				{formattedDate}
 			</div>
 		</div>
-		<hr class="border-zinc-700" />
+		<hr class="border-border relative top-px" />
 	</div>
 </div>

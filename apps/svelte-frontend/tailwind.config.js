@@ -54,7 +54,7 @@ export default {
 				snow: '#F4F4F5',
 				surface: {
 					DEFAULT: 'hsl(var(--surface))',
-					foreground: 'hsl(var(--surface-foreground))'
+					muted: 'hsl(var(--surface-muted))'
 				},
 				text: {
 					DEFAULT: 'hsl(var(--text-main))',

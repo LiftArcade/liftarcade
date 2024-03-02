@@ -1,2 +1,2 @@
-export { pooledDrizzleClient as drizzleClient } from "./client";
+export { client as drizzleClient } from "./client";
 export * from "./schema";

@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import { cva } from 'class-variance-authority';
 
-	export const typographyVariants = cva('transition-colors', {
+	export const typographyVariants = cva('', {
 		variants: {
 			variant: {
 				default: 'text-base',

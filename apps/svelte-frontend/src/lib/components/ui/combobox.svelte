@@ -8,18 +8,19 @@
 		handleSelected = (selected) => {
 			console.log(selected);
 		}
-	}: {
-		handleSelected: () => void;
-	} = $props();
+	} = $props<{
+		handleSelected: (selected: any) => void;
+	}>();
 
 	const {
-		elements: { menu, input, option, label },
-		states: { open, inputValue, touchedInput },
-		helpers: { isSelected }
+		elements: { menu, input, option },
+		states: { open, inputValue, touchedInput }
 	} = createCombobox({
 		onSelectedChange: ({ next }) => {
 			console.log(next);
-			handleSelected(next.value);
+			handleSelected(next?.value);
+			inputValue.set('');
+			return next;
 		}
 	});
 

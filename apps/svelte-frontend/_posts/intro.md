@@ -1,15 +1,10 @@
 ---
 pretitle: Intro
-title: "Finding Performance: An Introductory Post"
-excerpt: There are no two ways about it. Fitness is a journey. There are no
-  shortcuts. We're creating a product of ourselves, and that takes time.
-coverImage: /posts/finding-performance/hero.png
+title: 'Finding Performance: An Introductory Post'
 createdAt: 2022-06-26T12:08:20.494Z
 updatedAt: 2022-07-26T12:08:17.902Z
 authors:
   - name: Bryce M.
-ogImage:
-  url: /assets/blog/findingperformance/twit.jpg
 lastmod: 2022-06-27T19:15:15.227Z
 type: BlogArticle
 tags:

@@ -1,22 +1,10 @@
-import { drizzle } from "drizzle-orm/node-postgres";
-import postgres from "pg";
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
 import "dotenv/config";
 
-export const pooledDrizzleClient = (
-  dbString: string,
-  logger: boolean = false
-) => {
-  const pool = new postgres.Pool({
-    connectionString: dbString,
-  });
-  return drizzle(pool, {
-    logger,
-  });
-};
-
-export const singleDrizzleClient = (dbString: string) => {
-  const client = new postgres.Client({
-    connectionString: dbString,
-  });
-  return client.connect().then(() => drizzle(client));
+// Currently, this does not accept pooled clients.
+// INFO: Consider adding support for pooled clients if it ever gets bigger
+export const client = (dbString: string, logger: boolean = false) => {
+  const queryClient = postgres(dbString, { max: 1, idle_timeout: 5 });
+  return drizzle(queryClient, { logger });
 };

@@ -1,21 +1,59 @@
-import type { Session } from '@auth/core/types';
-import type { getSession } from '@auth/sveltekit';
+// src/lib/server/auth.ts
+import { Lucia } from 'lucia';
+import { dev } from '$app/environment';
+import { DrizzlePostgreSQLAdapter } from '@lucia-auth/adapter-drizzle';
+
+import { sessions, users } from '@liftarcade/services-database';
+import { dbClient } from '$lib/utils/db';
+
+// Add Oauth providers here
+import { Facebook } from 'arctic';
+import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET } from '$env/static/private';
+
+import type { InferSelectModel } from 'drizzle-orm/table';
+
+const adapter = new DrizzlePostgreSQLAdapter(dbClient, sessions, users);
 
 /**
- * Takes a session and throws an error if there is no user and user.id.
- * @param session The session object from getSession()
+ * This is the Lucia instance that is used by the server to handle requests.
+ * @description Don't use this directly unless you are adding it to the server handle.
+ * @dbClient a drizzle client instance that is attached to the server handle.
  */
-export const requireAuth = async (session: Awaited<ReturnType<typeof getSession>>) => {
-	try {
-		const resultedSession = await session;
-		if (!resultedSession) throw new Error('No user found');
-
-		const user = resultedSession.user;
-		if (!user) throw new Error('No user found in the session variable');
-		if (!user.id) throw new Error('No user id exists');
-
-		return true;
-	} catch {
-		throw new Error('Not authorized');
+export const lucia = new Lucia(adapter, {
+	sessionCookie: {
+		attributes: {
+			// set to `true` when using HTTPS
+			secure: !dev
+		}
+	},
+	getUserAttributes: (attributes) => {
+		return {
+			id: attributes.id,
+			name: attributes.name,
+			image: attributes.image,
+			email: attributes.email
+		};
 	}
-};
+});
+
+// Export the oauth provider instances after configuration.
+export const facebook = new Facebook(
+	FACEBOOK_CLIENT_ID,
+	FACEBOOK_CLIENT_SECRET,
+	'http://localhost:5173/api/auth/facebook/callback'
+);
+
+// export const google = new Google(
+// 	GOOGLE_CLIENT_ID,
+// 	GOOGLE_CLIENT_SECRET,
+// 	'http://localhost:5173/api/auth/google/callback'
+// );
+
+declare module 'lucia' {
+	interface Register {
+		Lucia: typeof lucia;
+		DatabaseUserAttributes: DatabaseUserAttributes;
+	}
+}
+
+interface DatabaseUserAttributes extends InferSelectModel<typeof users> {}

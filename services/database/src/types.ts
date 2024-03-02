@@ -7,6 +7,23 @@
 
 import z from "zod";
 
+const SUPPORTED_WEIGHT_UNITS = ["kg", "lb"] as const;
+
+const MAJOR_MUSCLE_GROUPS = [
+  "Arms",
+  "Chest",
+  "Back",
+  "Glutes",
+  "Legs",
+  "Core",
+  "Shoulders",
+] as const;
+
+const Weight = z.object({
+  value: z.number().min(0).max(1000),
+  unit: z.enum(SUPPORTED_WEIGHT_UNITS),
+});
+
 const Exercise = z.object({
   id: z.string(),
   name: z.string(),
@@ -24,9 +41,10 @@ const Activity = z.object({
   position: z.number(),
   sets: z.number().min(1).max(10),
   reps: z.number().min(1).max(30),
-  weight: z.number().max(1000),
+  weight: Weight,
   weightUnit: z.enum(["kg", "lb"]),
   intensity: z.number().min(0).max(100), // A 0-100 scale.
   exercise: Exercise,
 });
+
 export type Activity = z.infer<typeof Activity>;
