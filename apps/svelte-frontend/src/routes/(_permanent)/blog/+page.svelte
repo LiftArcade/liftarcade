@@ -3,7 +3,6 @@
 	import { cn } from '$lib/utils/cn';
 
 	export let data;
-	let { posts } = data;
 </script>
 
 <div class={cn(containerVariants({ variant: 'centered-padded' }))}>

@@ -11,10 +11,10 @@ export async function GET(event: RequestEvent): Promise<Response> {
 	// Get the callback codes, state and the stored state from the request
 	const code = event.url.searchParams.get('code');
 	const state = event.url.searchParams.get('state');
-	const storedState = event.cookies.get('facebook_oauth_state') ?? null;
+	const storedState = event.cookies.get('facebook_oauth_state') ?? undefined;
 
 	if (!code || !state || !storedState || state !== storedState) {
-		return new Response(null, {
+		return new Response(undefined, {
 			status: 400
 		});
 	}
@@ -61,21 +61,21 @@ export async function GET(event: RequestEvent): Promise<Response> {
 				...sessionCookie.attributes
 			});
 		}
-		return new Response(null, {
+		return new Response(undefined, {
 			status: 302,
 			headers: {
 				Location: '/'
 			}
 		});
-	} catch (e) {
+	} catch (error) {
 		// the specific error message depends on the provider
-		if (e instanceof OAuth2RequestError) {
+		if (error instanceof OAuth2RequestError) {
 			// invalid code
-			return new Response(null, {
+			return new Response(undefined, {
 				status: 400
 			});
 		}
-		return new Response(null, {
+		return new Response(undefined, {
 			status: 500
 		});
 	}

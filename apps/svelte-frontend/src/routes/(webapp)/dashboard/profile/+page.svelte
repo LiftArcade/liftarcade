@@ -17,7 +17,7 @@
 	<p class={cn(typographyVariants({ variant: 'p', color: 'muted' }))}>
 		We're working hard to get this to you asap.
 	</p>
-	<a href="/dashboard" class={cn(buttonVariants({ variant: 'default'  }), 'mt-3')}
+	<a href="/dashboard" class={cn(buttonVariants({ variant: 'default' }), 'mt-3')}
 		>Back to dashboard</a
 	>
 </div>

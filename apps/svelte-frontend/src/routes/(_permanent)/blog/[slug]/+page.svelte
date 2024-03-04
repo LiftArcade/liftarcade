@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let data;
 
-	const { pretitle, title, excerpt, coverImage, createdAt, authors } = data.attributes;
+	const { pretitle, title, excerpt, createdAt, authors } = data.attributes;
 	let formattedDate = new Date(createdAt || '').toLocaleDateString('en-US', {
 		month: 'long',
 		day: 'numeric',
@@ -58,5 +58,6 @@
 <div
 	class="mx-auto max-w-prose mt-12 prose prose-sm md:prose-lg prose-orange prose-gray dark:prose-invert px-4 sm:px-6 lg:px-8"
 >
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html data.body}
 </div>

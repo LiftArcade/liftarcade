@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Logo from '$lib/assets/logo.svg';
-	import LogoDark from '$lib/assets/logo-dark.svg';
 	import { buttonVariants } from '$lib/components/ui/button.svelte';
 	import { typographyVariants } from '$lib/components/ui/typography.svelte';
 	import { cn } from '$lib/utils/cn';

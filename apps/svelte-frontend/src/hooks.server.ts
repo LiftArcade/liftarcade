@@ -13,8 +13,8 @@ const attachDatabaseServerHandle = (async ({ event, resolve }) => {
 const authHandle: Handle = async ({ event, resolve }) => {
 	const sessionId = event.cookies.get(lucia.sessionCookieName);
 	if (!sessionId) {
-		event.locals.user = null;
-		event.locals.session = null;
+		event.locals.user = undefined;
+		event.locals.session = undefined;
 		return resolve(event);
 	}
 
@@ -35,8 +35,8 @@ const authHandle: Handle = async ({ event, resolve }) => {
 			...sessionCookie.attributes
 		});
 	}
-	event.locals.user = user;
-	event.locals.session = session;
+	event.locals.user = user || undefined;
+	event.locals.session = session || undefined;
 	return resolve(event);
 };
 

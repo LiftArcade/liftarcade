@@ -39,7 +39,7 @@
 			id: 'home',
 			href: '/',
 			value: 'Home',
-			activeMatch: /^\/$/.test($page.url.pathname)
+			activeMatch: /^\/$/.test($page.url.pathname) // eslint-disable-line svelte/valid-compile
 		},
 		{
 			id: 'guide',

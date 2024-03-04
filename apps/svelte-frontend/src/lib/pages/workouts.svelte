@@ -6,11 +6,7 @@
 
 	import type { workout } from '@liftarcade/services-database';
 
-	let {
-		promisedWorkouts,
-		currentPath,
-		currentWorkoutPage = 0
-	} = $props<{
+	let { promisedWorkouts, currentWorkoutPage = 0 } = $props<{
 		promisedWorkouts: Promise<(typeof workout.$inferSelect)[]>;
 		currentWorkoutPage: number;
 		currentPath: string;

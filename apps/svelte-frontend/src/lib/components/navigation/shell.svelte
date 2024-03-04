@@ -22,7 +22,7 @@
 			id: 'dashboard',
 			href: '/dashboard',
 			title: 'Dashboard',
-			activeMatch: /^\/dashboard$/.test($page.url.pathname),
+			activeMatch: /^\/dashboard$/.test($page.url.pathname), // eslint-disable-line svelte/valid-compile
 			icon: PieChart
 		},
 		{

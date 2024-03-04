@@ -2,7 +2,7 @@
 	export function turnOnDarkMode() {
 		localStorage.setItem('theme', 'dark');
 		document.documentElement.classList.add('dark');
-		// eslint-disable-next-line unicorn/no-array-for-each
+		// eslint-disable-next-line unicorn/no-array-for-each, @typescript-eslint/no-explicit-any
 		document.head.querySelectorAll('.meta-theme').forEach((meta: any) => {
 			meta.content = meta.dataset.dark;
 		});
@@ -11,7 +11,7 @@
 	export function turnOffDarkMode() {
 		localStorage.setItem('theme', 'light');
 		document.documentElement.classList.remove('dark');
-		// eslint-disable-next-line unicorn/no-array-for-each
+		// eslint-disable-next-line unicorn/no-array-for-each, @typescript-eslint/no-explicit-any
 		document.head.querySelectorAll('.meta-theme').forEach((meta: any) => {
 			meta.content = meta.dataset.light;
 		});
@@ -22,13 +22,13 @@
 		localStorage.removeItem('theme');
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			document.documentElement.classList.add('dark');
-			// eslint-disable-next-line unicorn/no-array-for-each
+			// eslint-disable-next-line unicorn/no-array-for-each, @typescript-eslint/no-explicit-any
 			document.head.querySelectorAll('.meta-theme').forEach((meta: any) => {
 				meta.content = meta.dataset.dark;
 			});
 		} else {
 			document.documentElement.classList.remove('dark');
-			// eslint-disable-next-line unicorn/no-array-for-each
+			// eslint-disable-next-line unicorn/no-array-for-each, @typescript-eslint/no-explicit-any
 			document.head.querySelectorAll('.meta-theme').forEach((meta: any) => {
 				meta.content = meta.dataset.light;
 			});

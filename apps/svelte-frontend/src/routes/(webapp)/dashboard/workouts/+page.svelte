@@ -7,6 +7,7 @@
 	let { recentWorkouts } = data;
 
 	let currentWorkoutPage = 1;
+	// eslint-disable-next-line svelte/valid-compile
 	let currentPath = $page.url.toString();
 </script>
 

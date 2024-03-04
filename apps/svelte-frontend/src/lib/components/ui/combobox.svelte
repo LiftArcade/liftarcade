@@ -9,7 +9,7 @@
 			console.log(selected);
 		}
 	} = $props<{
-		handleSelected: (selected: any) => void;
+		handleSelected: (selected: unknown) => void;
 	}>();
 
 	const {
