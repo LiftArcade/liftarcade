@@ -115,11 +115,10 @@ jobs:
       - name: 📥 Install Playwright Browsers
         run: pnpm playwright install --with-deps
 
-      - name: Run Server
-        run: pnpm run dev
-
       - name: 🎭 Playwright tests
-        run: pnpm exec node_modules/@playwright/test/cli.js test
+        run: |
+          pnpm run dev
+          pnpm exec node_modules/@playwright/test/cli.js test
 
       - name: 📊 Upload report
         uses: actions/upload-artifact@v3
