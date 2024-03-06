@@ -1,0 +1,55 @@
+name: 🤖 Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    defaults:
+      run:
+        working-directory: ./apps/svelte-frontend
+    if: github.ref == 'refs/heads/master'
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Set up NPM auth token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" >> ~/.npmrc
+
+      - name: Set NPM registry auth
+        run: pnpm install
+
+      - name: 🔬 Lint
+        run: pnpm run lint
+
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: -avzr --delete
+          path: ./*
+          remote_path: /var/www/my-app/
+          remote_host: liftarcade.com
+          remote_user: ec2-user
+          remote_key: "${{ secrets.SSH_KEY_GITHUB_ACTION }}"
