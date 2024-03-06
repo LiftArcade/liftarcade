@@ -17,10 +17,20 @@ import type { InferSelectModel } from 'drizzle-orm/table';
 const adapter = new DrizzlePostgreSQLAdapter(dbClient, sessions, users);
 
 let baseURL;
-
-if (VERCEL_ENV === 'production') baseURL = 'https://www.liftarcade.com/';
-if (VERCEL_ENV === 'development') baseURL = 'https://dev.liftarcade.com/';
-if (!VERCEL_ENV) baseURL = 'http://localhost:5173/';
+switch (VERCEL_ENV) {
+	case 'production': {
+		baseURL = 'https://www.liftarcade.com/';
+		break;
+	}
+	case 'development': {
+		baseURL = 'https://dev.liftarcade.com/';
+		break;
+	}
+	default: {
+		baseURL = 'http://localhost:5173/';
+		break;
+	}
+}
 
 /**
  * This is the Lucia instance that is used by the server to handle requests.
