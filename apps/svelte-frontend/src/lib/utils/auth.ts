@@ -8,6 +8,7 @@ import { dbClient } from '$lib/utils/db';
 
 // Add Oauth providers here
 import { Facebook } from 'arctic';
+import { VERCEL_URL } from '$env/static/private';
 import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET } from '$env/static/private';
 
 import type { InferSelectModel } from 'drizzle-orm/table';
@@ -40,7 +41,7 @@ export const lucia = new Lucia(adapter, {
 export const facebook = new Facebook(
 	FACEBOOK_CLIENT_ID,
 	FACEBOOK_CLIENT_SECRET,
-	'http://localhost:5173/api/auth/facebook/callback'
+	(VERCEL_URL || 'http://localhost:5173') + '/api/auth/facebook/callback'
 );
 
 // export const google = new Google(
