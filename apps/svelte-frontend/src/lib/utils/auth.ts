@@ -22,7 +22,7 @@ switch (VERCEL_ENV) {
 		baseURL = 'https://www.liftarcade.com/';
 		break;
 	}
-	case 'development': {
+	case 'preview': {
 		baseURL = 'https://dev.liftarcade.com/';
 		break;
 	}
