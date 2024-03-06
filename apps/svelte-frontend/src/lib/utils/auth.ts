@@ -8,12 +8,18 @@ import { dbClient } from '$lib/utils/db';
 
 // Add Oauth providers here
 import { Facebook } from 'arctic';
-import { VERCEL_URL } from '$env/static/private';
+import { VERCEL_ENV } from '$env/static/private';
 import { FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET } from '$env/static/private';
 
 import type { InferSelectModel } from 'drizzle-orm/table';
 
 const adapter = new DrizzlePostgreSQLAdapter(dbClient, sessions, users);
+
+let baseURL;
+
+if (VERCEL_ENV === 'production') baseURL = 'https://www.liftarcade.com/';
+if (VERCEL_ENV === 'development') baseURL = 'https://dev.liftarcade.com/';
+if (!VERCEL_ENV) baseURL = 'http://localhost:5173/';
 
 /**
  * This is the Lucia instance that is used by the server to handle requests.
@@ -41,7 +47,7 @@ export const lucia = new Lucia(adapter, {
 export const facebook = new Facebook(
 	FACEBOOK_CLIENT_ID,
 	FACEBOOK_CLIENT_SECRET,
-	(VERCEL_URL || 'http://localhost:5173') + '/api/auth/facebook/callback'
+	baseURL + '/api/auth/facebook/callback'
 );
 
 // export const google = new Google(
